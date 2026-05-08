@@ -1,0 +1,7 @@
+# macOS resource forks / metadata
+._*
+.DS_Store
+
+# Claude Code agent metadata
+.agents/
+skills-lock.json

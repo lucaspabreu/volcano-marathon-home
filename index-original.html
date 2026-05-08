@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Press &amp; Media — World Marathon Challenge®</title>
+<meta name="description" content="Press resource for the World Marathon Challenge® — the original 7 Marathons 7 Continents 7 Days® event. Established 2015. A RunBuk event." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsEvent",
+  "name": "World Marathon Challenge",
+  "alternateName": ["7 Marathons 7 Continents 7 Days", "777 World Marathon Challenge"],
+  "description": "The original 7 Marathons 7 Continents 7 Days® event. Established 2015.",
+  "startDate": "2027-01-30",
+  "endDate": "2027-02-05",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "organizer": {
+    "@type": "Organization",
+    "name": "RunBuk",
+    "foundingDate": "2015",
+    "url": "https://worldmarathonchallenge.com"
+  },
+  "location": [
+    {"@type":"Place","name":"Ultima Base, Antarctica"},
+    {"@type":"Place","name":"Cape Town, South Africa"},
+    {"@type":"Place","name":"Perth, Australia"},
+    {"@type":"Place","name":"Dubai, UAE"},
+    {"@type":"Place","name":"Madrid, Spain"},
+    {"@type":"Place","name":"Fortaleza, Brazil"},
+    {"@type":"Place","name":"Miami, USA"}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --navy:#041259;
+    --navy-2:#081e67;
+    --bib:#171676;
+    --red:#d32225;
+    --red-2:#d13028;
+    --ink:#101010;
+    --paper:#fafafa;
+    --smoke:#eee;
+    --line:#e3e3e8;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;overflow-x:hidden}
+  body{font-family:"Inter",system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5;-webkit-text-size-adjust:100%}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);font-weight:700}
+  h1,h2,h3,h4{font-weight:800;letter-spacing:-.02em;margin:0}
+  sup.tm{font-size:.5em;font-weight:700;letter-spacing:0;vertical-align:super;margin-left:1px;opacity:.85}
+
+  /* NAV */
+  .nav{background:var(--navy);color:#fff;position:relative;z-index:20}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:14px;min-width:0}
+  .logo .mark{width:38px;height:38px;background:var(--red);display:grid;place-items:center;font-size:11px;font-weight:800;flex-shrink:0}
+  .logo .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;width:42px;height:42px;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;padding:0}
+  .nav-toggle span{display:block;width:18px;height:2px;background:#fff;position:relative}
+  .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:#fff}
+  .nav-toggle span::before{top:-6px}
+  .nav-toggle span::after{top:6px}
+  .nav ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;font-size:14px;font-weight:600}
+  .nav ul a{color:#fff;text-decoration:none;opacity:.85}
+  .nav ul a.active{opacity:1;border-bottom:2px solid var(--red);padding-bottom:4px}
+
+  /* HERO */
+  .hero{position:relative;background:var(--navy);color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,18,89,.55),rgba(4,18,89,.85)),repeating-linear-gradient(135deg,#0a1a6a 0 28px,#081761 28px 56px)}
+  .hero-bg::after{content:"DROP IN: HERO PHOTO — RUNNERS ON ICE / FINISH LINE";position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-size:10px;letter-spacing:.2em;opacity:.5;font-weight:600;white-space:nowrap;max-width:90%;overflow:hidden;text-overflow:ellipsis}
+  .hero-inner{position:relative;padding:72px 0 64px}
+  .hero .heritage-strip{display:inline-flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#fff;background:rgba(0,0,0,.25);padding:8px 14px;border-left:3px solid var(--red);margin-bottom:24px;flex-wrap:wrap}
+  .hero .heritage-strip span{opacity:.85}
+  .hero .heritage-strip .dot{width:4px;height:4px;background:var(--red);border-radius:50%;flex-shrink:0}
+  .hero h1{font-size:clamp(40px,7vw,104px);line-height:.92;text-transform:uppercase;font-weight:900;word-break:break-word;hyphens:auto}
+  .hero h1 .red{color:var(--red)}
+  .hero .lede{margin-top:20px;max-width:62ch;font-size:17px;color:#cdd2e6}
+  .hero .lede strong{color:#fff;font-weight:700}
+  .hero .email{display:inline-block;margin-top:32px;font-size:clamp(16px,2.4vw,28px);font-weight:800;color:#fff;text-decoration:none;border-bottom:3px solid var(--red);padding-bottom:6px;word-break:break-all}
+
+  .triple{display:grid;grid-template-columns:repeat(3,1fr);background:var(--red);color:#fff}
+  .triple > div{padding:24px 32px;border-right:1px solid rgba(255,255,255,.18)}
+  .triple > div:last-child{border-right:0}
+  .triple .n{font-size:clamp(36px,6vw,56px);line-height:1;font-weight:900;letter-spacing:-.03em}
+  .triple .l{font-size:clamp(10px,1.4vw,12px);letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-top:6px}
+
+  /* SECTION */
+  section{padding:80px 0}
+  .section-title{font-size:clamp(28px,3.6vw,48px);line-height:1;margin:8px 0 0}
+  .section-head{margin-bottom:40px;max-width:760px}
+  .section-head .sub{margin-top:14px;font-size:16px;color:#3a3d4a;max-width:60ch}
+
+  /* FAST FACTS */
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+  .fact{padding:32px 24px;border-right:1px solid var(--line);border-bottom:2px solid var(--ink)}
+  .fact:last-child{border-right:0}
+  .fact .n{font-size:clamp(36px,5vw,56px);line-height:1;font-weight:900;letter-spacing:-.03em;color:var(--navy);word-break:break-word}
+  .fact .n.red{color:var(--red)}
+  .fact .l{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-top:12px}
+
+  /* HERITAGE TIMELINE */
+  .heritage{background:var(--ink);color:#fff;padding:80px 0}
+  .heritage .section-head .section-title{color:#fff}
+  .heritage .section-head .sub{color:#9aa0b8}
+  .timeline{position:relative;margin-top:24px;padding:48px 0 24px;border-top:1px solid #2a2a35}
+  .timeline-rail{position:absolute;left:0;right:0;top:48px;height:2px;background:#2a2a35}
+  .timeline-rail::after{content:"";position:absolute;left:0;top:-2px;height:6px;width:60%;background:var(--red)}
+  .timeline-track{display:grid;grid-template-columns:repeat(8,1fr);gap:0;position:relative}
+  .tl-item{padding-top:60px;position:relative;padding-right:16px}
+  .tl-item::before{content:"";position:absolute;top:42px;left:0;width:14px;height:14px;background:var(--red);border:3px solid var(--ink);border-radius:50%}
+  .tl-item.future::before{background:#2a2a35}
+  .tl-year{font-size:22px;font-weight:900;letter-spacing:-.02em;color:#fff}
+  .tl-item.future .tl-year{color:#5b6072}
+  .tl-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);font-weight:700;margin-top:4px}
+  .tl-item.future .tl-label{color:#5b6072}
+  .tl-text{font-size:13px;color:#cdd2e6;margin-top:8px;line-height:1.4}
+  .tl-item.future .tl-text{color:#7a7e92}
+
+  /* PRESS LOGO WALL */
+  .press-wall{background:#fff;padding:80px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .press-headline{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:48px}
+  .press-headline h2{font-size:clamp(32px,5vw,72px);line-height:.95;letter-spacing:-.03em;font-weight:900;text-transform:uppercase}
+  .press-headline h2 .red{color:var(--red)}
+  .press-headline .since{font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#5b6072;text-align:right;line-height:1.6}
+  .press-headline .since strong{color:var(--ink);display:block;font-size:16px}
+  .logo-wall{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+  .logo-cell{aspect-ratio:5/2;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;place-items:center;padding:24px;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(14px,2vw,24px);color:#1a1a1a;letter-spacing:-.01em;text-align:center}
+  .logo-cell.sans{font-family:Inter,sans-serif;letter-spacing:.04em;text-transform:uppercase;font-weight:900;font-size:clamp(12px,1.6vw,20px)}
+  .logo-cell.italic{font-style:italic}
+  .logo-cell.tiny{font-size:clamp(11px,1.4vw,17px)}
+  .logo-cell .dotred{color:var(--red)}
+
+  /* SELECTED COVERAGE */
+  .coverage{padding:80px 0;background:var(--paper)}
+  .cov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);border-left:1px solid var(--line)}
+  .cov-card{padding:28px 26px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:12px;min-height:240px;text-decoration:none;color:inherit;transition:.15s}
+  .cov-card:hover{background:var(--navy);color:#fff}
+  .cov-card:hover .cov-meta,.cov-card:hover .cov-arrow{color:#cdd2e6}
+  .cov-card:hover .cov-arrow{color:var(--red)}
+  .cov-meta{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--red);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .cov-headline{font-size:18px;font-weight:800;line-height:1.25;letter-spacing:-.01em;flex:1}
+  .cov-arrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#5b6072;margin-top:auto}
+  .archive-link{margin-top:32px;display:inline-block;font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:4px}
+
+  /* GALLERY */
+  .gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+  .ph{aspect-ratio:1/1;background:var(--navy-2);color:#fff;display:flex;align-items:flex-end;padding:14px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;background-image:repeating-linear-gradient(45deg,#0a1a6a 0 12px,#081761 12px 24px);position:relative;overflow:hidden}
+  .ph::before{content:attr(data-tag);position:absolute;top:12px;left:14px;font-size:10px;letter-spacing:.2em;color:#fff;opacity:.7}
+  .ph.tall{aspect-ratio:1/2;grid-row:span 2}
+  .ph.wide{aspect-ratio:2/1;grid-column:span 2}
+  .ph.red{background:var(--red);background-image:repeating-linear-gradient(45deg,#d32225 0 12px,#c01e21 12px 24px)}
+
+  /* MEDIA KIT */
+  .kit{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink)}
+  .kit a{padding:28px 24px;text-decoration:none;color:var(--ink);border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:16px;transition:.15s}
+  .kit a:nth-child(3n){border-right:0}
+  .kit a:nth-last-child(-n+3){border-bottom:0}
+  .kit a:hover{background:var(--navy);color:#fff}
+  .kit a:hover .arrow{color:var(--red)}
+  .kit .t{font-size:18px;font-weight:800}
+  .kit .s{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#5b6072;font-weight:600;margin-top:4px}
+  .kit a:hover .s{color:#cdd2e6}
+  .kit .arrow{font-size:24px;color:var(--red)}
+
+  /* TEAM */
+  .team{background:var(--smoke)}
+  .team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  .disc{background:#fff;padding:28px 22px;border-right:1px solid #d6d6dc;display:flex;flex-direction:column;gap:14px;min-height:240px}
+  .disc:last-child{border-right:0}
+  .disc .num{font-size:11px;letter-spacing:.18em;font-weight:700;color:var(--red)}
+  .disc .name{font-size:20px;font-weight:800;line-height:1.15;color:var(--navy)}
+  .disc .desc{font-size:13px;color:#3a3d4a;margin-top:auto;line-height:1.5}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:#fff;padding:64px 0}
+  .contact h2{font-size:clamp(28px,2.8vw,40px);line-height:1}
+  .contact .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-top:24px}
+  .contact .email{display:inline-block;font-size:clamp(18px,2.8vw,36px);font-weight:800;color:#fff;text-decoration:none;border-bottom:3px solid var(--red);padding-bottom:6px;margin-top:12px;word-break:break-all}
+  .contact .meta{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .contact .meta .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#9aa0b8;font-weight:700;margin-bottom:8px}
+  .contact .meta .v{font-size:15px;font-weight:600}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:#cdd2e6;padding:32px 0;font-size:13px}
+  footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+  footer .row a{color:#fff;text-decoration:none;border-bottom:1px solid var(--red)}
+  footer .tm-line{font-size:11px;color:#9aa0b8;margin-top:12px;letter-spacing:.04em;line-height:1.6;max-width:80ch}
+  footer .tm-line strong{color:#fff}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:1024px){
+    .timeline-track{grid-template-columns:repeat(4,1fr);gap:0;row-gap:32px}
+    .timeline-rail{display:none}
+    .tl-item::before{top:42px}
+    .logo-wall{grid-template-columns:repeat(2,1fr)}
+    .cov-grid{grid-template-columns:repeat(2,1fr)}
+    .team-grid{grid-template-columns:repeat(3,1fr)}
+    .disc{border-bottom:1px solid #d6d6dc}
+    .disc:nth-child(3n){border-right:0}
+  }
+  @media (max-width:820px){
+    .wrap{padding:0 20px}
+    section{padding:56px 0}
+    .heritage,.press-wall,.coverage,.contact{padding:56px 0}
+    .hero-inner{padding:48px 0 40px}
+    .nav ul{
+      display:none;
+      position:absolute;
+      top:72px;left:0;right:0;
+      flex-direction:column;
+      gap:0;
+      background:var(--navy);
+      padding:8px 20px 20px;
+      border-top:1px solid rgba(255,255,255,.1);
+      box-shadow:0 8px 16px rgba(0,0,0,.25);
+    }
+    .nav ul.open{display:flex}
+    .nav ul li{border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav ul a{display:block;padding:14px 0;font-size:15px;opacity:1}
+    .nav ul a.active{border-bottom:none;color:var(--red);padding-bottom:14px}
+    .nav-toggle{display:flex}
+    .facts{grid-template-columns:repeat(2,1fr)}
+    .fact{padding:24px 18px}
+    .fact:nth-child(2n){border-right:0}
+    .gallery{grid-template-columns:repeat(3,1fr)}
+    .ph.wide{grid-column:span 2}
+    .ph.tall{grid-row:span 1;aspect-ratio:1/1}
+    .kit{grid-template-columns:1fr}
+    .kit a{border-right:0;border-bottom:1px solid var(--line)}
+    .kit a:last-child{border-bottom:0}
+    .contact .grid{grid-template-columns:1fr;align-items:flex-start}
+    .team-grid{grid-template-columns:repeat(2,1fr)}
+    .disc{min-height:auto}
+    .disc:nth-child(3n){border-right:1px solid #d6d6dc}
+    .disc:nth-child(2n){border-right:0}
+    .timeline-track{grid-template-columns:repeat(2,1fr);row-gap:32px}
+    .cov-grid{grid-template-columns:1fr}
+    .cov-card{min-height:180px}
+    .press-headline{flex-direction:column;align-items:flex-start;gap:16px}
+    .press-headline .since{text-align:left}
+    .triple > div{padding:18px 16px}
+  }
+  @media (max-width:480px){
+    .wrap{padding:0 16px}
+    .hero h1{font-size:clamp(36px,11vw,56px)}
+    .hero .lede{font-size:15px}
+    .hero .heritage-strip{font-size:10px;letter-spacing:.16em;gap:10px;padding:8px 12px}
+    .triple{grid-template-columns:repeat(3,1fr)}
+    .triple > div{padding:14px 8px;text-align:center}
+    .triple .n{font-size:32px}
+    .triple .l{font-size:9px;letter-spacing:.12em}
+    .facts{grid-template-columns:1fr}
+    .fact{border-right:0}
+    .logo-wall{grid-template-columns:repeat(2,1fr)}
+    .logo-cell{aspect-ratio:3/2;padding:16px}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+    .ph.wide{grid-column:span 2}
+    .team-grid{grid-template-columns:1fr}
+    .disc{border-right:0!important}
+    .section-head{margin-bottom:28px}
+    footer .row{flex-direction:column;gap:8px}
+    .contact .meta{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo"><span class="mark">7·7·7</span><span class="name">World Marathon Challenge<sup class="tm">®</sup></span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle"><span></span></button>
+    <nav><ul id="navMenu">
+      <li><a href="#">The Event</a></li>
+      <li><a href="#">Route</a></li>
+      <li><a href="#">Athletes</a></li>
+      <li><a href="#">Organizers</a></li>
+      <li><a href="#" class="active">Press</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-inner">
+    <div class="heritage-strip">
+      <span>Established 2015</span>
+      <span class="dot"></span>
+      <span>12 editions</span>
+      <span class="dot"></span>
+      <span>The original 7·7·7</span>
+    </div>
+    <span class="eyebrow" style="color:#fff;opacity:.8;display:block;margin-bottom:8px">Press &amp; Media</span>
+    <h1>Seven Continents.<br><span class="red">Seven Days.</span></h1>
+    <p class="lede">Press resource for journalists and broadcasters covering the <strong>World Marathon Challenge<sup class="tm">®</sup></strong> — the original <strong>7 Marathons 7 Continents 7 Days<sup class="tm">®</sup></strong> event. A RunBuk event, established 2015.</p>
+    <a class="email" href="mailto:press@worldmarathonchallenge.com">press@worldmarathonchallenge.com</a>
+  </div>
+  <div class="triple">
+    <div><div class="n">7</div><div class="l">Marathons</div></div>
+    <div><div class="n">7</div><div class="l">Continents</div></div>
+    <div><div class="n">7</div><div class="l">Days</div></div>
+  </div>
+</section>
+
+<!-- FAST FACTS -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Fast Facts</span>
+      <h2 class="section-title">By the numbers.</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="n">183</div><div class="l">Miles Run</div></div>
+      <div class="fact"><div class="n red">23,600</div><div class="l">Miles Travelled</div></div>
+      <div class="fact"><div class="n">168</div><div class="l">Hour Race Clock</div></div>
+      <div class="fact"><div class="n">1,000+</div><div class="l">Press Mentions Since 2015</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HERITAGE TIMELINE -->
+<section class="heritage">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Heritage</span>
+      <h2 class="section-title">12 editions.<br>One original event.</h2>
+      <p class="sub">The World Marathon Challenge<sup class="tm">®</sup> has produced 7 marathons on 7 continents in 7 days — every January, every year, since 2015. Every record on this timeline was set on the official course, under the official 168-hour clock.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-rail"></div>
+      <div class="timeline-track">
+        <div class="tl-item">
+          <div class="tl-year">2015</div>
+          <div class="tl-label">Inaugural</div>
+          <div class="tl-text">First edition. David Gething &amp; Marianna Zaikova champions.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2016</div>
+          <div class="tl-label">First US Woman</div>
+          <div class="tl-text">Becca Pizzi becomes first US woman to complete 7·7·7.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2017</div>
+          <div class="tl-label">Men's Record</div>
+          <div class="tl-text">Michael Wardian sets fastest average — 2:45:57 per marathon.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2019</div>
+          <div class="tl-label">Women's Record</div>
+          <div class="tl-text">Susannah Gill: 3:28:09 women's average-time record.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2020</div>
+          <div class="tl-label">First Woman Overall</div>
+          <div class="tl-text">Kristina Schou Madsen wins outright — 3:25:57 average.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2025</div>
+          <div class="tl-label">Records Fall</div>
+          <div class="tl-text">Estefanía Únzu Ripoll &amp; Tomomi Bitoh set new women's marks.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2026</div>
+          <div class="tl-label">11th Edition</div>
+          <div class="tl-text">Wardian &amp; Reed champions. Oldest woman finisher: age 70.</div>
+        </div>
+        <div class="tl-item future">
+          <div class="tl-year">2027</div>
+          <div class="tl-label">12th Edition</div>
+          <div class="tl-text">Jan 30 — Feb 5, 2027. Antarctica → Miami.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS LOGO WALL -->
+<section class="press-wall">
+  <div class="wrap">
+    <div class="press-headline">
+      <h2>1,000+ mentions.<br><span class="red">Since 2015.</span></h2>
+      <div class="since">
+        <strong>Featured in</strong>
+        50+ countries · 12 editions · One original event
+      </div>
+    </div>
+    <div class="logo-wall" aria-label="Selected media outlets that have covered the World Marathon Challenge">
+      <div class="logo-cell italic">The New York Times</div>
+      <div class="logo-cell sans">BBC</div>
+      <div class="logo-cell sans tiny">CNN</div>
+      <div class="logo-cell italic">The Washington Post</div>
+      <div class="logo-cell sans">REUTERS</div>
+      <div class="logo-cell sans">ESPN</div>
+      <div class="logo-cell italic">Runner's World</div>
+      <div class="logo-cell sans">CBS NEWS</div>
+    </div>
+    <p style="margin-top:16px;font-size:12px;color:#5b6072;letter-spacing:.04em">Selection from 1,000+ press mentions worldwide. Logos shown as wordmarks — replace with brand SVGs in production.</p>
+  </div>
+</section>
+
+<!-- SELECTED COVERAGE -->
+<section class="coverage">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Selected Coverage</span>
+      <h2 class="section-title">Stories of record.</h2>
+      <p class="sub">A curated selection of long-form features from tier-1 outlets, spanning a decade of editions. Every story below covers an athlete competing at the official World Marathon Challenge<sup class="tm">®</sup>.</p>
+    </div>
+    <div class="cov-grid">
+
+      <a class="cov-card" href="https://www.nytimes.com/athletic/6084912/2025/02/11/a-cancer-surgeon-believes-in-reach-goals-his-latest-7-marathons-7-continents-7-days/" target="_blank" rel="noopener">
+        <div class="cov-meta"><span>The New York Times</span><span>2025</span></div>
+        <div class="cov-headline">"Why a cancer surgeon pushed himself to the absolute limit"</div>
+        <div class="cov-arrow">Read →</div>
+      </a>
+
+      <a class="cov-card" href="https://www.washingtonpost.com/national/health-science/7-marathons-7-days-7-continents-and-one-man-with-parkinsons-can-he-make-it/2018/02/09/ef39ce80-0c14-11e8-8b0d-891602206fb7_story.html" target="_blank" rel="noopener">
+        <div class="cov-meta"><span>The Washington Post</span><span>2018</span></div>
+        <div class="cov-headline">"7 marathons, 7 days, 7 continents and one man with Parkinson's. Can he make it?"</div>
+        <div class="cov-arrow">Read →</div>
+      </a>
+
+      <a class="cov-card" href="https://www.cnn.com/2017/01/19/health/iyw-cancer-survivor-marathon-trnd/index.html" target="_blank" rel="noopener">
+        <div class="cov-meta"><span>CNN</span><span>2017</span></div>
+        <div class="cov-headline">"Brain cancer survivor to attempt 7 marathons in 7 days — on 7 continents"</div>
+        <div class="cov-arrow">Read →</div>
+      </a>
+
+      <a class="cov-card" href="https://www.runnersworld.com/news/a30916189/2020-world-marathon-challenge-results/" target="_blank" rel="noopener">
+        <div class="cov-meta"><span>Runner's World</span><span>2020</span></div>
+        <div class="cov-headline">"Kristina Schou Madsen becomes first woman to win World Marathon Challenge outright"</div>
+        <div class="cov-arrow">Read →</div>
+      </a>
+
+      <a class="cov-card" href="https://www.bbc.com/news/articles/c75e3dny5ygo" target="_blank" rel="noopener">
+        <div class="cov-meta"><span>BBC News</span><span>2026</span></div>
+        <div class="cov-headline">"I ran marathons on seven continents in a week in memory of my brother"</div>
+        <div class="cov-arrow">Read →</div>
+      </a>
+
+      <a class="cov-card" href="https://www.businessinsider.com/ryan-hall-fitbit-stats-world-marathon-challenge-2017-1" target="_blank" rel="noopener">
+        <div class="cov-meta"><span>Business Insider</span><span>2017</span></div>
+        <div class="cov-headline">"34-year-old marathoner posts inconceivable Fitbit stats after 7 marathons on 7 continents"</div>
+        <div class="cov-arrow">Read →</div>
+      </a>
+
+    </div>
+    <a href="#" class="archive-link">View 1,000+ press mentions since 2015 →</a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section style="padding:0">
+  <div class="wrap" style="padding-top:0;padding-bottom:80px">
+    <div class="section-head" style="padding-top:80px">
+      <span class="eyebrow">Imagery</span>
+      <h2 class="section-title">From every continent.</h2>
+    </div>
+    <div class="gallery">
+      <div class="ph wide" data-tag="01 / Antarctica">[ Hero — start line on ice ]</div>
+      <div class="ph tall" data-tag="02 / Cape Town">[ Sunrise start ]</div>
+      <div class="ph" data-tag="03 / Perth">[ Coastal stretch ]</div>
+      <div class="ph red" data-tag="04 / Dubai">[ Desert miles ]</div>
+      <div class="ph" data-tag="05 / Madrid">[ City finish ]</div>
+      <div class="ph wide" data-tag="06 / Fortaleza">[ Beach marathon ]</div>
+      <div class="ph" data-tag="07 / Miami">[ Final finish line ]</div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA KIT -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Media Kit</span>
+      <h2 class="section-title">Download assets.</h2>
+    </div>
+    <div class="kit">
+      <a href="#"><div><div class="t">Event Overview</div><div class="s">PDF · Brief</div></div><span class="arrow">↓</span></a>
+      <a href="#"><div><div class="t">Route Map</div><div class="s">SVG · PNG</div></div><span class="arrow">↓</span></a>
+      <a href="#"><div><div class="t">Logo Pack</div><div class="s">SVG · EPS · PNG</div></div><span class="arrow">↓</span></a>
+      <a href="#"><div><div class="t">Press Releases</div><div class="s">2015 — 2027</div></div><span class="arrow">↓</span></a>
+      <a href="#"><div><div class="t">Photography</div><div class="s">2026 Event · Hi-res</div></div><span class="arrow">↓</span></a>
+      <a href="#"><div><div class="t">B-Roll &amp; Video</div><div class="s">2026 Event · 4K</div></div><span class="arrow">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- RUNBUK TEAM -->
+<section class="team">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Organized by RunBuk</span>
+      <h2 class="section-title">Delivered by a team, not a name.</h2>
+      <p class="sub">The World Marathon Challenge<sup class="tm">®</sup> is operated by <strong style="color:var(--ink)">RunBuk</strong> — a specialist team that designs, builds and runs world-class endurance events on every continent.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="disc">
+        <div class="num">01</div>
+        <div class="name">Race Management</div>
+        <div class="desc">Race direction, course certification, timing, results, and athlete operations across all seven legs.</div>
+      </div>
+      <div class="disc">
+        <div class="num">02</div>
+        <div class="name">Global Logistics</div>
+        <div class="desc">Charter aviation, ground transport, customs, and venue coordination across seven continents in 168 hours.</div>
+      </div>
+      <div class="disc">
+        <div class="num">03</div>
+        <div class="name">Medical &amp; Performance</div>
+        <div class="desc">On-site physicians, physiotherapists, nutrition, hydration, and recovery protocols between every marathon.</div>
+      </div>
+      <div class="disc">
+        <div class="num">04</div>
+        <div class="name">Media &amp; Broadcast</div>
+        <div class="desc">In-house photo, video, and press operations. Handles accreditation, b-roll, embeds, and live story feeds.</div>
+      </div>
+      <div class="disc">
+        <div class="num">05</div>
+        <div class="name">Athlete Services</div>
+        <div class="desc">Briefings, gear, accommodation, and round-the-clock support for every competitor on the field.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:24px;font-size:14px;color:#5b6072">For interviews with named team leads — race management, logistics, medical, or media — contact the press desk below.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Press Desk</span>
+    <h2>Get in touch.</h2>
+    <div class="grid">
+      <div>
+        <a class="email" href="mailto:press@worldmarathonchallenge.com">press@worldmarathonchallenge.com</a>
+      </div>
+      <div class="meta">
+        <div><div class="k">Response</div><div class="v">Within 24 hours</div></div>
+        <div><div class="k">Accreditation</div><div class="v">Apply by Dec 1</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div><strong style="color:#fff">World Marathon Challenge<sup class="tm">®</sup></strong> · Established 2015 · The original 7·7·7 event · A <a href="#">RunBuk</a> event</div>
+      <div>press@worldmarathonchallenge.com</div>
+    </div>
+    <div class="tm-line">
+      <strong>World Marathon Challenge®</strong>, <strong>7 Marathons 7 Continents 7 Days®</strong>, and <strong>7 Marathons 7 Continents 7 Consecutive Days®</strong> are registered trademarks of RunBuk. <strong>777™</strong> is a common-law trademark of RunBuk. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    if(!btn || !menu) return;
+    btn.addEventListener('click', function(){
+      var open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    menu.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

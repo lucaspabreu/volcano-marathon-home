@@ -1,0 +1,1228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Volcano Marathon® — Easter Island, Chile · 28 June 2026</title>
+<meta name="description" content="The Volcano Marathon® on Easter Island. A 42.195 km marathon between Moai statues, archaeological sites and volcanic landscapes. Established 2013. A RunBuk® event." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#181818;
+    --bg-2:#0d0d0d;
+    --bg-3:#222;
+    --bg-light:#fafafa;
+    --bg-light-2:#f3f3f3;
+    --line:#2a2a2a;
+    --line-2:#363636;
+    --line-light:#e3e3e3;
+    --text:#fff;
+    --text-mute:#999;
+    --text-mute-2:#858585;
+    --text-dark:#181818;
+    --text-dark-2:#3c4441;
+    --gold:#feb910;
+    --gold-2:#fdb815;
+    --gold-soft:rgba(254,185,16,.14);
+    --red:#d32225;
+    --red-2:#a8221a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg);color:var(--text);
+    line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;
+    font-weight:400;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--gold);color:var(--bg)}
+
+  .display{font-family:"Anton",sans-serif;font-weight:400;letter-spacing:.005em;line-height:.85;text-transform:uppercase}
+  .label{font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:600}
+  sup.tm{font-family:"Inter",sans-serif;font-size:.42em;font-weight:600;letter-spacing:0;vertical-align:super;margin-left:2px;opacity:.7}
+
+  .wrap{max-width:1320px;margin:0 auto;padding:0 40px;position:relative}
+  .wrap-wide{max-width:1480px;margin:0 auto;padding:0 40px;position:relative}
+
+  .eyebrow{
+    font-family:"Heebo",sans-serif;
+    font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;
+    display:inline-flex;align-items:center;gap:14px;
+  }
+  .eyebrow::before{content:"";width:32px;height:1px;background:var(--gold);display:inline-block}
+
+  /* ============ ANNOUNCEMENT BAR ============ */
+  .top-bar{
+    background:var(--bg-2);color:var(--text);
+    border-bottom:1px solid var(--line);
+    padding:10px 0;
+    font-family:"Heebo",sans-serif;
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;
+  }
+  .top-bar-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .top-bar .left{color:var(--text-mute)}
+  .top-bar .left b{color:var(--gold);font-weight:700}
+  .top-bar .left .short{display:none}
+  .top-bar .right{display:flex;gap:24px;color:var(--text-mute)}
+  .top-bar .right a{transition:.2s}
+  .top-bar .right a:hover{color:var(--gold)}
+
+  /* ============ NAV ============ */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(24,24,24,.92);color:var(--text);
+    border-bottom:1px solid var(--line);
+    backdrop-filter:saturate(160%) blur(10px);
+    -webkit-backdrop-filter:saturate(160%) blur(10px);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+  .logo{display:flex;align-items:center;gap:14px;color:var(--text);min-width:0;text-decoration:none}
+  .logo img{height:48px;width:auto;flex-shrink:0;display:block}
+  .logo .name{display:flex;flex-direction:column;line-height:1;min-width:0}
+  .logo .name .a{
+    font-family:"Anton",sans-serif;font-weight:400;font-size:20px;letter-spacing:.04em;
+    text-transform:uppercase;white-space:nowrap;color:var(--text);
+  }
+  .logo .name .b{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--text-mute);margin-top:5px;font-weight:500;
+  }
+  .nav ul{
+    list-style:none;display:flex;gap:2px;
+    font-family:"Inter",sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  }
+  .nav ul a{padding:10px 14px;display:inline-block;color:var(--text);transition:.2s;opacity:.8}
+  .nav ul a:hover{color:var(--gold);opacity:1}
+  .nav ul li.mobile-only{display:none}
+  .nav-cta{display:flex;align-items:center;gap:14px;flex-shrink:0}
+  .btn-register{
+    font-family:"Inter",sans-serif;font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+    background:var(--gold);color:var(--bg);padding:14px 22px;display:inline-flex;align-items:center;gap:10px;
+    transition:.25s;border:0;cursor:pointer;
+  }
+  .btn-register:hover{background:#fff;color:var(--bg)}
+  .btn-register .arrow{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;font-size:18px;line-height:1}
+
+  .nav-toggle{
+    display:none;background:transparent;border:0;color:var(--text);
+    width:44px;height:44px;cursor:pointer;flex-shrink:0;padding:0;
+    flex-direction:column;align-items:flex-end;justify-content:center;gap:5px;
+  }
+  .nav-toggle i{
+    display:block;width:24px;height:2px;background:var(--text);
+    transition:transform .25s ease,opacity .2s ease,width .25s ease,background .2s ease;
+    transform-origin:center;
+  }
+  .nav-toggle i:nth-child(2){width:18px}
+  .nav-toggle:hover i{background:var(--gold)}
+  .nav-toggle:hover i:nth-child(2){width:24px}
+  .nav-toggle[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg);width:24px}
+  .nav-toggle[aria-expanded="true"] i:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg);width:24px}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;overflow:hidden;
+    min-height:100vh;
+    color:var(--text);
+    background:var(--bg-2);
+    display:flex;align-items:flex-end;
+    padding:200px 0 80px;
+  }
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;overflow:hidden;
+    background:#0a0a0a;
+  }
+  .hero-video{
+    position:absolute;top:50%;left:50%;
+    width:max(100vw,177.78vh);
+    height:max(56.25vw,100vh);
+    transform:translate(-50%,-50%);
+    border:0;pointer-events:none;
+    opacity:0;transition:opacity 1.6s ease;
+  }
+  .hero-video.ready{opacity:1}
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:
+      linear-gradient(180deg,rgba(13,13,13,.45) 0%,rgba(13,13,13,.5) 55%,rgba(13,13,13,.95) 100%),
+      radial-gradient(ellipse 60% 40% at 25% 30%,rgba(254,185,16,.12),transparent 65%);
+  }
+  .hero-inner{position:relative;z-index:2;width:100%}
+
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:24px;align-items:center;
+    margin-bottom:36px;
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--text);font-weight:500;
+  }
+  .hero-meta .pip{
+    width:8px;height:8px;background:var(--gold);border-radius:50%;
+    box-shadow:0 0 0 4px rgba(254,185,16,.2);
+    display:inline-block;animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .hero-meta .sep{width:24px;height:1px;background:var(--text-mute);display:inline-block}
+  .hero-meta b{color:var(--gold);font-weight:700;letter-spacing:.28em}
+
+  .hero-display{
+    font-family:"Anton",sans-serif;font-weight:400;
+    text-transform:uppercase;line-height:.82;letter-spacing:.005em;
+    color:var(--text);
+    position:relative;
+  }
+  .hero-display .l1{
+    display:block;
+    font-size:clamp(72px,15vw,260px);
+  }
+  .hero-display .l2{
+    display:block;
+    font-size:clamp(72px,15vw,260px);
+    -webkit-text-stroke:2px var(--text);
+    color:transparent;
+    margin-top:-.05em;
+  }
+  .hero-display .accent{color:var(--gold)}
+
+  .hero-tagline{
+    margin-top:36px;
+    font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;
+    font-size:clamp(22px,3vw,42px);line-height:1.2;letter-spacing:-.005em;
+    color:var(--text);max-width:30ch;
+  }
+  .hero-tagline span{color:var(--gold)}
+
+  .hero-foot{
+    margin-top:48px;display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between;
+    padding-top:32px;border-top:1px solid rgba(255,255,255,.16);
+  }
+  .hero-foot-text{
+    font-family:"Inter",sans-serif;font-size:15px;line-height:1.65;color:#dcdcdc;font-weight:400;max-width:48ch;
+  }
+  .hero-foot-text em{font-family:"DM Serif Display",serif;font-style:italic;color:var(--gold);font-weight:400;letter-spacing:-.01em}
+
+  .btn-primary{
+    font-family:"Inter",sans-serif;font-weight:800;font-size:14px;letter-spacing:.18em;text-transform:uppercase;
+    background:var(--gold);color:var(--bg);padding:20px 32px;display:inline-flex;align-items:center;gap:14px;
+    transition:.25s;border:0;cursor:pointer;
+  }
+  .btn-primary:hover{background:#fff;color:var(--bg);transform:translateY(-2px)}
+  .btn-primary .arrow{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;font-size:22px;line-height:1;transition:transform .25s}
+  .btn-primary:hover .arrow{transform:translate(4px,-2px)}
+
+  .btn-ghost{
+    font-family:"Inter",sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--text);padding:18px 0;display:inline-flex;align-items:baseline;gap:12px;
+    border-bottom:1px solid var(--text);transition:.25s;
+  }
+  .btn-ghost:hover{color:var(--gold);border-color:var(--gold)}
+  .btn-ghost .arrow{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;font-size:18px}
+
+  .btn-red{
+    font-family:"Inter",sans-serif;font-weight:800;font-size:14px;letter-spacing:.18em;text-transform:uppercase;
+    background:var(--red);color:#fff;padding:20px 32px;display:inline-flex;align-items:center;gap:14px;
+    transition:.25s;border:0;cursor:pointer;
+  }
+  .btn-red:hover{background:var(--red-2)}
+  .btn-red .arrow{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;font-size:22px;line-height:1}
+
+  /* ============ DATE STRIP ============ */
+  .date-strip{
+    background:var(--gold);color:var(--bg);
+    padding:22px 0;
+    font-family:"Anton",sans-serif;
+    text-transform:uppercase;
+    overflow:hidden;
+  }
+  .marquee{display:flex;white-space:nowrap;animation:scroll 50s linear infinite;will-change:transform}
+  .marquee span{
+    padding:0 32px;flex-shrink:0;
+    font-size:clamp(20px,2.5vw,36px);letter-spacing:.04em;line-height:1;display:inline-flex;align-items:center;gap:24px;
+  }
+  .marquee span::after{
+    content:"";display:inline-block;width:8px;height:8px;background:var(--bg);border-radius:50%;margin-left:32px;
+  }
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============ SECTIONS ============ */
+  section{position:relative}
+  .pad{padding:140px 0}
+  .pad-sm{padding:96px 0}
+
+  .section-title{
+    font-family:"Anton",sans-serif;font-weight:400;
+    font-size:clamp(48px,7.5vw,128px);line-height:.88;letter-spacing:.005em;
+    text-transform:uppercase;color:var(--text);
+  }
+  .section-title.dark{color:var(--text-dark)}
+  .section-title .accent{color:var(--gold)}
+  .section-title .it{
+    font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;
+    color:var(--gold);text-transform:lowercase;letter-spacing:-.02em;
+  }
+
+  .section-lede{
+    margin-top:32px;max-width:60ch;
+    font-family:"Inter",sans-serif;font-size:18px;line-height:1.7;color:#cfcfcf;font-weight:400;
+  }
+  .section-lede.dark{color:var(--text-dark-2)}
+  .section-lede em{color:var(--gold);font-style:italic;font-family:"DM Serif Display",serif;font-weight:400}
+
+  /* ============ INTRO ============ */
+  .intro{background:var(--bg);color:var(--text);padding:140px 0;border-bottom:1px solid var(--line)}
+  .intro-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:96px;align-items:end}
+  .intro-tag{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:16px;
+  }
+  .intro-h{
+    font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(36px,4.4vw,72px);line-height:.95;
+    text-transform:uppercase;letter-spacing:.005em;color:var(--text);
+  }
+  .intro-h .it{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;color:var(--gold);text-transform:lowercase;letter-spacing:-.02em}
+  .intro-body{
+    font-family:"Inter",sans-serif;font-size:18px;line-height:1.75;color:#cfcfcf;font-weight:400;
+  }
+  .intro-body p + p{margin-top:18px}
+  .intro-body em{color:var(--gold);font-style:italic;font-family:"DM Serif Display",serif;font-weight:400}
+  .intro-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    margin-top:80px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .istat{padding:36px 28px;border-right:1px solid var(--line);position:relative}
+  .istat:last-child{border-right:0}
+  .istat .lbl{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--text-mute);font-weight:500;margin-bottom:14px;
+  }
+  .istat .v{
+    font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(40px,4.5vw,68px);line-height:.95;
+    color:var(--text);letter-spacing:.005em;
+  }
+  .istat .v .accent{color:var(--gold)}
+  .istat .sub{
+    font-family:"Inter",sans-serif;font-size:13px;color:var(--text-mute);margin-top:10px;font-weight:400;
+  }
+
+  /* ============ TWO ROWS (alternating image/text) ============ */
+  .two-row{padding:0;background:var(--bg)}
+  .two-row .row{
+    display:grid;grid-template-columns:1fr 1fr;align-items:stretch;
+    border-top:1px solid var(--line);
+  }
+  .two-row .row.reverse .img{order:2}
+  .two-row .row.reverse .txt{order:1}
+  .two-row .img{
+    background:var(--bg-2) center/cover no-repeat;
+    min-height:560px;position:relative;
+  }
+  .two-row .img::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.55) 100%);
+  }
+  .two-row .img .img-cap{
+    position:absolute;left:32px;bottom:32px;z-index:2;
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:#fff;font-weight:600;
+  }
+  .two-row .img .img-cap b{color:var(--gold);font-weight:700;display:block;font-size:14px;margin-bottom:6px;letter-spacing:.18em}
+  .two-row .txt{
+    padding:96px 80px;display:flex;flex-direction:column;justify-content:center;
+    border-left:1px solid var(--line);
+  }
+  .two-row .row.reverse .txt{border-left:0;border-right:1px solid var(--line)}
+  .two-row .txt .num{
+    font-family:"Anton",sans-serif;font-weight:400;font-size:18px;letter-spacing:.18em;color:var(--gold);
+    margin-bottom:18px;
+  }
+  .two-row .txt h3{
+    font-family:"Anton",sans-serif;font-weight:400;
+    font-size:clamp(40px,5vw,80px);line-height:.92;letter-spacing:.005em;
+    text-transform:uppercase;color:var(--text);
+  }
+  .two-row .txt h3 .it{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;color:var(--gold);text-transform:lowercase;letter-spacing:-.02em}
+  .two-row .txt p{
+    margin-top:28px;font-size:16px;line-height:1.75;color:#cfcfcf;max-width:46ch;font-weight:400;
+  }
+  .two-row .txt p em{color:var(--gold);font-style:italic;font-family:"DM Serif Display",serif;font-weight:400}
+  .two-row .txt .checks{
+    margin-top:32px;display:flex;flex-direction:column;gap:14px;
+    font-family:"Heebo",sans-serif;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    color:#dcdcdc;font-weight:500;
+  }
+  .two-row .txt .checks li{display:flex;align-items:center;gap:14px;list-style:none}
+  .two-row .txt .checks li::before{
+    content:"";width:8px;height:8px;background:var(--gold);border-radius:50%;flex-shrink:0;
+  }
+  .two-row .txt .more{margin-top:36px}
+
+  /* ============ CTA SECTION ============ */
+  .cta{
+    background:var(--bg-2);color:var(--text);
+    padding:120px 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    position:relative;overflow:hidden;
+  }
+  .cta::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(254,185,16,.1),transparent 60%);
+    pointer-events:none;
+  }
+  .cta-inner{position:relative;text-align:center}
+  .cta-eyebrow{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:24px;display:inline-block;
+  }
+  .cta h2{
+    font-family:"Anton",sans-serif;font-weight:400;
+    font-size:clamp(40px,7vw,128px);line-height:.88;letter-spacing:.005em;
+    text-transform:uppercase;color:var(--text);
+  }
+  .cta h2 .it{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;color:var(--gold);text-transform:lowercase;letter-spacing:-.02em}
+  .cta-sub{
+    margin:32px auto 0;max-width:60ch;
+    font-family:"Inter",sans-serif;font-size:17px;line-height:1.7;color:#cfcfcf;font-weight:400;
+  }
+  .cta-actions{
+    margin-top:48px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap;
+  }
+
+  /* ============ TESTIMONIALS ============ */
+  .quotes{background:var(--bg-light);color:var(--text-dark);padding:140px 0}
+  .quotes-head{margin-bottom:64px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:32px}
+  .quotes-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:48px;
+  }
+  .qcard{
+    border-top:2px solid var(--text-dark);padding-top:32px;display:flex;flex-direction:column;
+  }
+  .qcard .mark{
+    font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;color:var(--gold);
+    font-size:80px;line-height:.5;height:32px;margin-bottom:16px;
+  }
+  .qcard .body{
+    font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;
+    font-size:22px;line-height:1.4;color:var(--text-dark);letter-spacing:-.005em;
+  }
+  .qcard .who{
+    margin-top:auto;padding-top:32px;
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--text-mute-2);font-weight:500;line-height:1.7;
+  }
+  .qcard .who b{
+    display:block;font-family:"Anton",sans-serif;font-weight:400;font-size:18px;letter-spacing:.06em;
+    color:var(--text-dark);margin-bottom:6px;text-transform:uppercase;
+  }
+
+  /* ============ EVENT CARDS ============ */
+  .events{background:var(--bg);color:var(--text);padding:140px 0;border-top:1px solid var(--line)}
+  .events-head{margin-bottom:64px}
+  .events-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  }
+  .ecard{
+    position:relative;display:flex;flex-direction:column;
+    background:var(--bg-2);
+    aspect-ratio:3/4;overflow:hidden;
+    transition:.35s;cursor:pointer;
+    border:1px solid var(--line);
+  }
+  .ecard .photo{
+    position:absolute;inset:0;background:var(--bg-2) center/cover no-repeat;
+    transition:transform .8s ease;
+  }
+  .ecard:hover .photo{transform:scale(1.06)}
+  .ecard::before{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.85) 100%);transition:.3s;
+  }
+  .ecard:hover::before{background:linear-gradient(180deg,rgba(13,13,13,.2) 0%,rgba(13,13,13,.92) 100%)}
+  .ecard .body{
+    position:relative;z-index:2;margin-top:auto;padding:28px 26px 26px;
+  }
+  .ecard .tag{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:10px;
+  }
+  .ecard h3{
+    font-family:"Anton",sans-serif;font-weight:400;
+    font-size:clamp(22px,2vw,30px);line-height:.95;letter-spacing:.005em;
+    text-transform:uppercase;color:#fff;margin-bottom:6px;
+  }
+  .ecard .loc{
+    font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;
+    font-size:14px;color:#dcdcdc;
+  }
+  .ecard .arrow{
+    margin-top:18px;font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+    color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:10px;opacity:.85;
+  }
+  .ecard .arrow::after{content:"→";font-family:"DM Serif Display",serif;font-style:italic;font-size:14px}
+
+  /* ============ RUNBUK BLOCK ============ */
+  .runbuk{
+    background:var(--bg-2);color:var(--text);padding:140px 0;
+    border-top:1px solid var(--line);position:relative;overflow:hidden;
+  }
+  .runbuk-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:96px;align-items:center}
+  .runbuk-logo{max-width:280px;width:100%;height:auto;display:block;margin-bottom:24px;filter:brightness(0) invert(1)}
+  .runbuk-tag{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--gold);font-weight:600;margin-bottom:18px;
+  }
+  .runbuk h2{
+    font-family:"Anton",sans-serif;font-weight:400;font-size:clamp(36px,5vw,80px);line-height:.92;
+    text-transform:uppercase;letter-spacing:.005em;color:var(--text);
+  }
+  .runbuk h2 .it{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;color:var(--gold);text-transform:lowercase;letter-spacing:-.02em}
+  .runbuk p{
+    margin-top:32px;font-size:17px;line-height:1.75;color:#cfcfcf;font-weight:400;max-width:54ch;
+  }
+  .runbuk .more{margin-top:36px}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--bg-2);color:#cfcfcf;padding:96px 0 32px;
+    border-top:1px solid var(--line);
+    font-family:"Inter",sans-serif;font-size:13px;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid var(--line);
+  }
+  .foot-brand{display:flex;flex-direction:column;gap:18px}
+  .foot-brand img.foot-logo{height:auto;max-width:240px;width:100%;display:block}
+  .foot-brand strong{
+    font-family:"Anton",sans-serif;font-weight:400;font-size:22px;text-transform:uppercase;letter-spacing:.04em;
+    color:var(--text);display:block;
+  }
+  .foot-brand .ml{font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-mute);margin-top:6px;font-weight:500}
+  .foot-brand .mission{
+    font-size:14px;line-height:1.7;color:#bbb;max-width:36ch;margin-top:8px;
+  }
+  .foot-brand .mission em{color:var(--gold);font-style:italic;font-family:"DM Serif Display",serif;font-weight:400}
+  .foot-runbuk{display:flex;align-items:center;gap:14px;margin-top:6px;padding-top:18px;border-top:1px solid var(--line)}
+  .foot-runbuk img{height:18px;width:auto;display:block;filter:brightness(0) invert(1);opacity:.85}
+  .foot-runbuk .lbl{font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--text-mute);font-weight:500}
+
+  .foot-col h4{
+    font-family:"Anton",sans-serif;font-weight:400;font-size:16px;text-transform:uppercase;letter-spacing:.12em;
+    color:var(--text);margin-bottom:20px;
+  }
+  .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .foot-col a{font-size:13px;color:#bbb;transition:color .2s;font-weight:400}
+  .foot-col a:hover{color:var(--gold)}
+
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+    padding-top:28px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-mute);font-weight:500;
+  }
+  .foot-bottom a{color:#bbb;transition:.2s}
+  .foot-bottom a:hover{color:var(--gold)}
+  .socials{display:flex;gap:12px}
+  .socials a{
+    width:36px;height:36px;border:1px solid var(--line-2);display:grid;place-items:center;color:#bbb;
+    font-family:"Inter",sans-serif;font-weight:700;font-size:12px;letter-spacing:.04em;
+    transition:.2s;
+  }
+  .socials a:hover{background:var(--gold);border-color:var(--gold);color:var(--bg)}
+
+  /* ============ REVEAL ============ */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1s ease}
+  .reveal.in{opacity:1;transform:none}
+  .reveal-d1{transition-delay:.1s}
+  .reveal-d2{transition-delay:.2s}
+  .reveal-d3{transition-delay:.3s}
+
+  @media (prefers-reduced-motion:reduce){
+    .marquee,.hero.in .hero-bg{animation:none;transform:none}
+    .reveal{opacity:1;transform:none}
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1100px){
+    .nav-inner{position:relative}
+    .nav ul{display:none}
+    .nav-toggle{display:flex;order:3}
+    .nav-cta{order:2}
+    .logo{order:1}
+    .nav-inner > nav{display:contents}
+    .nav ul{
+      position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;
+      background:var(--bg-2);border-bottom:1px solid var(--line);padding:8px 24px 24px;
+      z-index:100;
+    }
+    .nav ul.open{display:flex}
+    .nav ul li{border-bottom:1px solid var(--line)}
+    .nav ul a{display:block;padding:18px 0;font-size:13px}
+    .intro{padding:96px 0}
+    .intro-grid{grid-template-columns:1fr;gap:40px}
+    .intro-stats{grid-template-columns:repeat(2,1fr);margin-top:56px}
+    .istat{border-bottom:1px solid var(--line)}
+    .istat:nth-child(2n){border-right:0}
+    .istat:nth-child(n+3){border-bottom:0}
+    .two-row .row,
+    .two-row .row.reverse{grid-template-columns:1fr}
+    .two-row .row.reverse .img,
+    .two-row .img{order:1;min-height:340px}
+    .two-row .row.reverse .txt,
+    .two-row .txt{order:2;border-left:0;border-right:0;border-top:1px solid var(--line);padding:56px 32px}
+    .quotes{padding:96px 0}
+    .quotes-grid{grid-template-columns:1fr;gap:32px}
+    .events{padding:96px 0}
+    .events-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+    .runbuk{padding:96px 0}
+    .runbuk-grid{grid-template-columns:1fr;gap:40px}
+    .runbuk-logo{max-width:220px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:40px 32px}
+  }
+  @media (max-width:720px){
+    .wrap,.wrap-wide{padding:0 20px}
+    .pad,.pad-sm{padding:80px 0}
+    /* TOP BAR */
+    .top-bar{padding:8px 0;font-size:10px;letter-spacing:.16em}
+    .top-bar-inner{justify-content:center}
+    .top-bar .right{display:none}
+    .top-bar .left{font-size:10px;line-height:1.5;text-align:center}
+    .top-bar .left .dash{display:none}
+    .top-bar .left .full{display:none}
+    .top-bar .left .short{display:inline}
+    /* NAV */
+    .nav-inner{height:64px;gap:10px}
+    .logo img{height:38px}
+    .logo .name{display:none}
+    .nav-cta{display:none}
+    .nav ul li.mobile-only{display:block;margin-top:14px;padding-top:16px;border-top:1px solid var(--line);border-bottom:0!important}
+    .nav ul .menu-register{
+      background:var(--gold);color:var(--bg)!important;display:flex!important;align-items:center;justify-content:space-between;gap:12px;
+      padding:18px 20px!important;font-weight:800;letter-spacing:.18em;opacity:1!important;
+    }
+    .nav ul .menu-register:hover{background:#fff;color:var(--bg)!important}
+    .nav ul .menu-register .arrow{font-family:"DM Serif Display",serif;font-style:italic;font-weight:400;font-size:18px}
+    /* HERO */
+    .hero{min-height:auto;padding:96px 0 56px}
+    .hero-meta{font-size:10px;letter-spacing:.2em;gap:10px 14px;margin-bottom:24px}
+    .hero-meta .sep{display:none}
+    .hero-display .l1,.hero-display .l2{font-size:clamp(56px,17vw,120px);line-height:.86}
+    .hero-tagline{margin-top:24px;font-size:clamp(20px,6vw,32px)}
+    .hero-foot{margin-top:32px;padding-top:24px;gap:24px;flex-direction:column;align-items:flex-start}
+    .hero-foot-text{font-size:14px;max-width:none}
+    .btn-primary{width:100%;justify-content:center;padding:18px 24px;font-size:13px}
+    .btn-red{width:100%;justify-content:center}
+    /* DATE STRIP */
+    .date-strip{padding:14px 0}
+    .marquee span{font-size:clamp(18px,5vw,24px);padding:0 18px;gap:14px}
+    .marquee span::after{margin-left:18px;width:6px;height:6px}
+    /* INTRO */
+    .intro{padding:72px 0}
+    .intro-h{font-size:clamp(36px,11vw,56px)}
+    .intro-body{font-size:16px}
+    .intro-stats{grid-template-columns:repeat(2,1fr);margin-top:48px}
+    .istat{padding:28px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .istat:nth-child(2n){border-right:0}
+    .istat:nth-child(n+3){border-bottom:0}
+    .istat .v{font-size:clamp(34px,9vw,52px)}
+    /* TWO-ROW */
+    .two-row .img{min-height:260px}
+    .two-row .img .img-cap{left:20px;bottom:20px;font-size:10px}
+    .two-row .txt{padding:48px 24px}
+    .two-row .txt h3{font-size:clamp(36px,10vw,56px)}
+    .two-row .txt p{font-size:15px}
+    .two-row .txt .checks{font-size:12px;letter-spacing:.14em}
+    /* CTA */
+    .cta{padding:80px 0}
+    .cta h2{font-size:clamp(36px,12vw,72px)}
+    .cta-sub{font-size:15px}
+    .cta-actions{flex-direction:column;align-items:stretch;gap:18px;margin-top:36px}
+    .cta-actions .btn-primary,.cta-actions .btn-ghost{width:100%;justify-content:center;text-align:center}
+    /* QUOTES */
+    .quotes{padding:80px 0}
+    .quotes-head{flex-direction:column;align-items:flex-start;gap:24px;margin-bottom:48px}
+    .qcard .body{font-size:18px}
+    /* EVENTS */
+    .events{padding:80px 0}
+    .events-head{margin-bottom:40px}
+    .events-grid{grid-template-columns:1fr;gap:16px}
+    .ecard{aspect-ratio:5/4;min-height:280px}
+    .ecard h3{font-size:24px}
+    /* RUNBUK */
+    .runbuk{padding:80px 0}
+    .runbuk h2{font-size:clamp(32px,10vw,52px)}
+    .runbuk p{font-size:15px}
+    .runbuk-logo{max-width:180px}
+    /* FOOTER */
+    footer{padding:64px 0 24px}
+    .foot-grid{grid-template-columns:1fr;gap:36px;padding-bottom:36px}
+    .foot-brand img.foot-logo{max-width:200px}
+    .foot-bottom{flex-direction:column;align-items:flex-start;font-size:10px}
+    /* SECTION TITLE */
+    .section-title{font-size:clamp(40px,12vw,72px)}
+    .section-lede{font-size:15px;margin-top:24px}
+  }
+  @media (max-width:380px){
+    .wrap,.wrap-wide{padding:0 16px}
+    .nav-inner{gap:6px}
+    .logo img{height:34px}
+    .btn-register{padding:9px 11px;font-size:10px;letter-spacing:.1em}
+    .btn-register .arrow{display:none}
+    .hero-display .l1,.hero-display .l2{font-size:18vw}
+    .istat{padding:24px 14px}
+    .istat .v{font-size:32px}
+    .istat .lbl{font-size:9px;letter-spacing:.22em}
+    .istat .sub{font-size:11px}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="wrap top-bar-inner">
+    <div class="left"><b>14th Edition</b><span class="dash"> — </span><span class="full">Easter Island, Chile · 28 June 2026</span><span class="short"> · 28 Jun 2026</span></div>
+    <div class="right">
+      <a href="#">EN</a>
+      <a href="#">Store</a>
+      <a href="mailto:info@runbuk.com">info@runbuk.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo" aria-label="Volcano Marathon">
+      <img src="https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/65c6c8dc1fb8a9db61603141_volcano-logo%20white%20sq.png" alt="Volcano Marathon" />
+      <span class="name">
+        <span class="a">Volcano Marathon<sup class="tm">®</sup></span>
+        <span class="b">Easter Island · 2026</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">
+      <i></i><i></i><i></i>
+    </button>
+    <nav><ul id="navMenu">
+      <li><a href="#intro">Race Info</a></li>
+      <li><a href="#travel">Travel</a></li>
+      <li><a href="#gear">Gear</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#voices">Voices</a></li>
+      <li><a href="#events">Other Events</a></li>
+      <li class="mobile-only"><a href="#register" class="menu-register">Register <span class="arrow">↗</span></a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <a href="#register" class="btn-register">Register <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <iframe
+      class="hero-video"
+      id="heroVideo"
+      src="https://www.youtube-nocookie.com/embed/73rI_R5xwz0?autoplay=1&mute=1&loop=1&playlist=73rI_R5xwz0&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&enablejsapi=1"
+      allow="autoplay; encrypted-media; picture-in-picture; accelerometer; gyroscope"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+      title="Volcano Marathon"
+      tabindex="-1"
+      aria-hidden="true"></iframe>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+
+    <div class="hero-meta reveal">
+      <span class="pip"></span>
+      <span>Registration Open</span>
+      <span class="sep"></span>
+      <span><b>28 JUN 2026</b></span>
+      <span class="sep"></span>
+      <span>Easter Island · Chile</span>
+    </div>
+
+    <h1 class="hero-display reveal reveal-d1">
+      <span class="l1">Volcano</span>
+      <span class="l2">Marathon</span>
+    </h1>
+
+    <p class="hero-tagline reveal reveal-d2">
+      Mysterious. Remote. <span>Epic.</span>
+    </p>
+
+    <div class="hero-foot reveal reveal-d3">
+      <p class="hero-foot-text">
+        A full <em>42.195&nbsp;km</em> marathon between the Moai of Rapa Nui — the most remote
+        inhabited island on Earth. Established 2013. A RunBuk<sup class="tm">®</sup> event.
+      </p>
+      <a href="#register" class="btn-primary">Register for 2026 <span class="arrow">↗</span></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- DATE STRIP MARQUEE -->
+<div class="date-strip" aria-hidden="true">
+  <div class="marquee">
+    <span>Easter Island</span><span>Chile</span><span>28 June 2026</span><span>Edition 14</span><span>Mysterious · Remote · Epic</span>
+    <span>Easter Island</span><span>Chile</span><span>28 June 2026</span><span>Edition 14</span><span>Mysterious · Remote · Epic</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro" id="intro">
+  <div class="wrap">
+    <div class="intro-grid">
+      <div class="reveal">
+        <div class="intro-tag">About the Race</div>
+        <h2 class="intro-h">Run between<br>the <span class="it">Moai.</span></h2>
+      </div>
+      <div class="intro-body reveal reveal-d1">
+        <p>
+          The Volcano Marathon<sup class="tm">®</sup> is a full <em>42.195&nbsp;km</em> race held on
+          Easter Island — a remote volcanic outpost <em>3,700&nbsp;km</em> off the coast of Chile.
+          Runners cross extinct craters, lava fields and Polynesian archaeological sites, finishing
+          beneath the gaze of the iconic Moai statues.
+        </p>
+        <p>
+          It is part marathon, part pilgrimage — a five-day expedition that combines a world-class
+          road race with cultural immersion in <em>Rapa Nui,</em> one of the most enigmatic places
+          on the planet.
+        </p>
+      </div>
+    </div>
+
+    <div class="intro-stats reveal reveal-d2">
+      <div class="istat">
+        <div class="lbl">Distance</div>
+        <div class="v">42<span class="accent">.2</span> KM</div>
+        <div class="sub">Certified full marathon</div>
+      </div>
+      <div class="istat">
+        <div class="lbl">Race Date</div>
+        <div class="v">28 <span class="accent">JUN</span></div>
+        <div class="sub">2026 · Sunday morning</div>
+      </div>
+      <div class="istat">
+        <div class="lbl">Avg. Temperature</div>
+        <div class="v">21°<span class="accent">C</span></div>
+        <div class="sub">Southern winter · mild</div>
+      </div>
+      <div class="istat">
+        <div class="lbl">Established</div>
+        <div class="v">20<span class="accent">13</span></div>
+        <div class="sub">14 editions · 40+ countries</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL & ITINERARY -->
+<section class="two-row" id="travel">
+  <div class="row">
+    <div class="img" style="background-image:url('https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/65c6c8dc1fb8a9db61603221_Easter_Island_ESA419941_(cropped%2C_lightened).webp')">
+      <div class="img-cap"><b>01 / Travel</b>Hanga Roa · Rapa Nui</div>
+    </div>
+    <div class="txt reveal">
+      <div class="num">01 / Travel &amp; Itinerary</div>
+      <h3>Five days <span class="it">on the island.</span></h3>
+      <p>
+        A complete <em>5-day</em> expedition — fly into Mataveri Airport (IPC), settle into Hanga Roa,
+        spend the days exploring Moai, craters and coastline, race on Sunday and recover with the
+        team before flying out.
+      </p>
+      <ul class="checks">
+        <li>Welcome &amp; race briefing — Day 02</li>
+        <li>Volcano Marathon® race day — 28 June</li>
+        <li>Recovery + Moai grand tour — Day 04</li>
+        <li>Awards dinner &amp; farewell — Day 05</li>
+      </ul>
+      <a href="#" class="btn-ghost more">More about travel <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- GEAR & TRAINING -->
+  <div class="row reverse" id="gear">
+    <div class="img" style="background-image:url('https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/6692d9cb72bc9f982662ce57_Easter%20Island%20Volcano%20Marathon%20by%20Runbuk%202.webp')">
+      <div class="img-cap"><b>02 / Gear</b>Course-tested kit</div>
+    </div>
+    <div class="txt reveal">
+      <div class="num">02 / Gear &amp; Training</div>
+      <h3>Train hard. <span class="it">Pack light.</span></h3>
+      <p>
+        The Volcano Marathon is a road marathon on volcanic terrain — no extreme cold, no special
+        gear. What you need is a <em>solid 16-week build,</em> a pair of broken-in road shoes, and
+        the discipline to taper.
+      </p>
+      <ul class="checks">
+        <li>16-week training plan included</li>
+        <li>Recommended shoes &amp; apparel list</li>
+        <li>Hydration &amp; nutrition guide</li>
+        <li>Pre-race workouts &amp; recovery</li>
+      </ul>
+      <a href="#" class="btn-ghost more">More about gear <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <!-- SCHEDULE & PRICES -->
+  <div class="row" id="prices">
+    <div class="img" style="background-image:url('https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/6693095360203c46216be57f_9Y0A8478%20(1).jpg')">
+      <div class="img-cap"><b>03 / Prices</b>Expedition pricing</div>
+    </div>
+    <div class="txt reveal">
+      <div class="num">03 / Schedule &amp; Prices</div>
+      <h3>An <span class="it">all-inclusive</span> expedition.</h3>
+      <p>
+        The Volcano Marathon entry covers the <em>full island programme:</em> accommodation,
+        in-island transport, race entry, briefing dinner, post-race celebration and the official
+        Moai grand tour.
+      </p>
+      <ul class="checks">
+        <li>Race entry &amp; bib · timing chip</li>
+        <li>5 nights · Hanga Roa accommodation</li>
+        <li>Airport transfers &amp; tour transport</li>
+        <li>Welcome dinner &amp; awards ceremony</li>
+      </ul>
+      <a href="#" class="btn-ghost more">View full pricing <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="register">
+  <div class="wrap cta-inner">
+    <span class="cta-eyebrow reveal">28 June 2026 · Easter Island, Chile</span>
+    <h2 class="reveal reveal-d1">Ignite your <span class="it">passion.</span></h2>
+    <p class="cta-sub reveal reveal-d2">
+      Spaces are limited. Each edition of the Volcano Marathon caps participation to preserve the
+      island and the experience. Secure your place for Edition 14 today.
+    </p>
+    <div class="cta-actions reveal reveal-d3">
+      <a href="#" class="btn-primary">Registration <span class="arrow">↗</span></a>
+      <a href="#" class="btn-ghost">Talk to the team <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="quotes" id="voices">
+  <div class="wrap">
+    <div class="quotes-head reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--text-dark)">Voices from the field</span>
+        <h2 class="section-title dark" style="margin-top:18px;font-size:clamp(40px,5.5vw,84px)">Testimonials.</h2>
+      </div>
+      <a href="#" class="btn-ghost" style="color:var(--text-dark);border-color:var(--text-dark)">
+        Read more stories <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="quotes-grid">
+      <div class="qcard reveal">
+        <div class="mark">"</div>
+        <div class="body">
+          Mysterious. Remote. Epic. Running between the Moai is unlike any marathon I have completed —
+          the silence, the stones, the ocean. The whole island feels alive.
+        </div>
+        <div class="who">
+          <b>Sir Ranulph Fiennes</b>
+          Polar Explorer · Endurance Athlete
+        </div>
+      </div>
+      <div class="qcard reveal reveal-d1">
+        <div class="mark">"</div>
+        <div class="body">
+          One of the most extraordinary marathons in the world. The course, the people, the history —
+          it stays with you long after you've crossed the line.
+        </div>
+        <div class="who">
+          <b>Steven Seaton</b>
+          Former Editor · Runner's World UK
+        </div>
+      </div>
+      <div class="qcard reveal reveal-d2">
+        <div class="mark">"</div>
+        <div class="body">
+          A perfectly organised race in a place that has no equal. Running past the Moai at sunrise is
+          something every distance runner should experience at least once.
+        </div>
+        <div class="who">
+          <b>Harvey Smyth</b>
+          Veteran Marathoner
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER EVENTS -->
+<section class="events" id="events">
+  <div class="wrap">
+    <div class="events-head reveal">
+      <span class="eyebrow">More from RunBuk<sup class="tm">®</sup></span>
+      <h2 class="section-title" style="margin-top:18px;font-size:clamp(40px,5.5vw,84px)">
+        Other <span class="it">marathons.</span>
+      </h2>
+      <p class="section-lede">
+        The Volcano Marathon is one of seven world-class endurance events designed and operated by
+        RunBuk — from the ice of Antarctica to the lights of Lapland.
+      </p>
+    </div>
+
+    <div class="events-grid">
+      <a class="ecard reveal" href="#">
+        <div class="photo" style="background-image:url('https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/65c6c8dc1fb8a9db61603223_Ahu-Tongariki-2013.webp')"></div>
+        <div class="body">
+          <div class="tag">Jun 2026 · Chile</div>
+          <h3>Volcano<br>Marathon<sup class="tm">®</sup></h3>
+          <div class="loc">Easter Island</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+      <a class="ecard reveal reveal-d1" href="#">
+        <div class="photo" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1517783999520-f068d7431a60?auto=format&fit=crop&w=1200&q=70')"></div>
+        <div class="body">
+          <div class="tag">Apr 2027 · Arctic</div>
+          <h3>North Pole<br>Marathon<sup class="tm">®</sup></h3>
+          <div class="loc">90° North · Sea Ice</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+      <a class="ecard reveal reveal-d2" href="#">
+        <div class="photo" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1551918120-9739cb430c6d?auto=format&fit=crop&w=1200&q=70')"></div>
+        <div class="body">
+          <div class="tag">Dec 2026 · Antarctica</div>
+          <h3>Antarctic Ice<br>Marathon<sup class="tm">®</sup></h3>
+          <div class="loc">Union Glacier · 80°S</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+      <a class="ecard reveal reveal-d3" href="#">
+        <div class="photo" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?auto=format&fit=crop&w=1200&q=70')"></div>
+        <div class="body">
+          <div class="tag">Nov 2026 · Antarctica</div>
+          <h3>Antarctic<br>Ice Ultra™</h3>
+          <div class="loc">100k · Polar Plateau</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+      <a class="ecard reveal" href="#">
+        <div class="photo" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1200&q=70')"></div>
+        <div class="body">
+          <div class="tag">Dec 2026 · Patagonia</div>
+          <h3>Strait of Magellan<br>Marathon<sup class="tm">®</sup></h3>
+          <div class="loc">Punta Arenas · Chile</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+      <a class="ecard reveal reveal-d1" href="#">
+        <div class="photo" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=1200&q=70')"></div>
+        <div class="body">
+          <div class="tag">Jan 2027 · Worldwide</div>
+          <h3>777 World Marathon<br>Challenge<sup class="tm">®</sup></h3>
+          <div class="loc">7 Marathons / 7 Continents / 7 Days</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+      <a class="ecard reveal reveal-d2" href="#">
+        <div class="photo" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=1200&q=70')"></div>
+        <div class="body">
+          <div class="tag">Feb 2027 · Finland</div>
+          <h3>Aurora<br>Marathon<sup class="tm">®</sup></h3>
+          <div class="loc">Lapland · Northern Lights</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+      <a class="ecard reveal reveal-d3" href="#">
+        <div class="photo" style="background-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1489447068241-b3490214e879?auto=format&fit=crop&w=1200&q=70')"></div>
+        <div class="body">
+          <div class="tag">Jul 2026 · Arctic</div>
+          <h3>North Pole<br>Marathon · Summer</h3>
+          <div class="loc">Arctic Ocean</div>
+          <div class="arrow">Details</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RUNBUK -->
+<section class="runbuk">
+  <div class="wrap">
+    <div class="runbuk-grid">
+      <div class="reveal">
+        <div class="runbuk-tag">Who We Are</div>
+        <img class="runbuk-logo" src="https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/696a008a732fcb70cd67d067_71c83cd3c69c7f340d745ca25a26f14b_RUNBUK%20black.png" alt="RunBuk" />
+      </div>
+      <div class="reveal reveal-d1">
+        <h2>Discover new worlds<br><span class="it">within</span> &amp; beyond.</h2>
+        <p>
+          The mission of RunBuk<sup class="tm">®</sup> is to help you explore the world through running.
+          We design, build and operate world-class endurance events on every continent — from the ice
+          fields of Antarctica to the volcanic shores of Easter Island, from the North Pole to the
+          Strait of Magellan.
+        </p>
+        <a href="#" class="btn-ghost more">About RunBuk <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img class="foot-logo" src="https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/65c6c8dc1fb8a9db6160318a_volcano%20marathon%20logo%20copy.png" alt="Volcano Marathon" />
+        <div>
+          <strong>Volcano Marathon<sup class="tm">®</sup></strong>
+          <div class="ml">Established 2013</div>
+        </div>
+        <div class="mission">
+          A full marathon between the <em>Moai</em> of Easter Island. Mysterious. Remote. Epic.
+        </div>
+        <div class="foot-runbuk">
+          <span class="lbl">A</span>
+          <img src="https://cdn.prod.website-files.com/65c6c8dc1fb8a9db6160306b/696a008a732fcb70cd67d067_71c83cd3c69c7f340d745ca25a26f14b_RUNBUK%20black.png" alt="RunBuk" />
+          <span class="lbl">Event</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Race Info</h4>
+        <ul>
+          <li><a href="#intro">Event</a></li>
+          <li><a href="#prices">Schedule &amp; Prices</a></li>
+          <li><a href="#">Videos</a></li>
+          <li><a href="#">7 Marathons Club</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Race Travel</h4>
+        <ul>
+          <li><a href="#travel">Itinerary</a></li>
+          <li><a href="#">Getting There</a></li>
+          <li><a href="#">Accommodation</a></li>
+          <li><a href="#">Things to Do</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Preparation</h4>
+        <ul>
+          <li><a href="#gear">Gear</a></li>
+          <li><a href="#">Training</a></li>
+          <li><a href="#">Nutrition</a></li>
+          <li><a href="#">Medical</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <div class="socials" style="margin-top:0">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">F</a>
+          <a href="#" aria-label="YouTube">Y</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+        <ul style="margin-top:24px">
+          <li><a href="mailto:info@runbuk.com">info@runbuk.com</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 RunBuk Inc. · All rights reserved.</span>
+      <span>Volcano Marathon® is a RunBuk trademark.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    if(btn && menu){
+      btn.addEventListener('click', function(){
+        var open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.addEventListener('click', function(e){
+        if(e.target.tagName === 'A'){
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    }
+    var hero = document.getElementById('hero');
+    if(hero){ requestAnimationFrame(function(){ hero.classList.add('in'); }); }
+
+    // Always reveal the bg video iframe — independent of YT IFrame API
+    var heroVideo = document.getElementById('heroVideo');
+    if(heroVideo){
+      var revealed = false;
+      var reveal = function(){ if(!revealed){ revealed = true; heroVideo.classList.add('ready'); } };
+      heroVideo.addEventListener('load', function(){ setTimeout(reveal, 800); });
+      // Guaranteed fade-in even if load doesn't fire
+      setTimeout(reveal, 2200);
+    }
+
+
+    var els = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+      els.forEach(function(el){ io.observe(el); });
+    } else {
+      els.forEach(function(el){ el.classList.add('in'); });
+    }
+  })();
+</script>
+
+<!-- YouTube IFrame API — only used to mask the end-screen recommendations.
+     The video plays via &autoplay=1 in the URL regardless of whether the API loads. -->
+<script src="https://www.youtube.com/iframe_api" async></script>
+<script>
+  var heroPlayer;
+  function onYouTubeIframeAPIReady(){
+    if(typeof YT === 'undefined' || !YT.Player) return;
+    var iframe = document.getElementById('heroVideo');
+    if(!iframe) return;
+    try{
+      heroPlayer = new YT.Player('heroVideo', {
+        events:{
+          onStateChange: function(e){
+            if(e.data === YT.PlayerState.PLAYING){
+              try{
+                var dur = heroPlayer.getDuration();
+                if(dur && dur > 2){
+                  clearInterval(window.__heroLoopWatch);
+                  window.__heroLoopWatch = setInterval(function(){
+                    try{
+                      var t = heroPlayer.getCurrentTime();
+                      if(t >= dur - 0.8){ heroPlayer.seekTo(0, true); }
+                    }catch(_){}
+                  }, 250);
+                }
+              }catch(_){}
+            }
+            if(e.data === YT.PlayerState.ENDED){
+              try{ heroPlayer.seekTo(0, true); heroPlayer.playVideo(); }catch(_){}
+            }
+          }
+        }
+      });
+    }catch(_){}
+  }
+</script>
+
+</body>
+</html>

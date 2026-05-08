@@ -1,0 +1,1552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>777™ World Marathon Challenge® — 7 Marathons · 7 Continents · 7 Days</title>
+<meta name="description" content="Run 7 marathons on 7 continents in 7 consecutive days. January 2027 marks the 10th edition of the World Marathon Challenge®, a RunBuk® event." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --bg-2:#fafafa;
+    --bg-3:#f3f3f5;
+    --smoke:#eeeeee;
+    --paper:#f4f1ea;
+    --navy:#041259;
+    --navy-2:#081e67;
+    --navy-deep:#030c40;
+    --ink:#101010;
+    --ink-2:#1a1a1a;
+    --text:#101010;
+    --text-2:#3a3d4a;
+    --mute:#5b6072;
+    --line:#e3e3e8;
+    --line-strong:#cdd0d8;
+    --line-dark:rgba(255,255,255,.1);
+    --line-dark-strong:rgba(255,255,255,.22);
+    --text-on-dark:#ffffff;
+    --text-2-on-dark:#cdd2e6;
+    --mute-on-dark:#8a91b0;
+    --red:#d32225;
+    --red-2:#a8221a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{overflow-x:hidden}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Montserrat",-apple-system,BlinkMacSystemFont,sans-serif;
+    background:var(--bg);color:var(--text);
+    line-height:1.55;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;
+    font-weight:400;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--red);color:#fff}
+
+  .display{font-family:"Montserrat",sans-serif;font-weight:900;letter-spacing:-.005em;line-height:.85;text-transform:uppercase}
+  .mono{font-family:"Heebo",sans-serif;font-weight:500;letter-spacing:0}
+  sup.tm{font-family:"Heebo",sans-serif;font-size:.4em;font-weight:500;letter-spacing:0;vertical-align:super;margin-left:2px;opacity:.7}
+
+  .wrap{max-width:1360px;margin:0 auto;padding:0 40px;position:relative}
+  .eyebrow{
+    font-family:"Heebo",sans-serif;
+    font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--red);font-weight:600;
+    display:inline-flex;align-items:center;gap:12px;
+  }
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--red);display:inline-block}
+
+  /* ============ TOP TICKER ============ */
+  .top-strip{
+    background:var(--navy-deep);color:var(--text-2-on-dark);
+    border-bottom:1px solid var(--line-dark);
+    overflow:hidden;
+    font-family:"Heebo",sans-serif;
+    font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  }
+  .ticker{display:flex;white-space:nowrap;animation:tick 80s linear infinite;padding:10px 0;will-change:transform}
+  .ticker span{padding:0 28px;display:inline-flex;align-items:center;gap:14px;flex-shrink:0}
+  .ticker span::after{content:"●";color:var(--red);font-size:7px;margin-left:28px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============ NAV ============ */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--navy);color:var(--text-on-dark);
+    border-bottom:1px solid var(--navy-deep);
+  }
+  .nav .logo .name .a{color:var(--text-on-dark)}
+  .nav .logo .name .b{color:var(--mute-on-dark)}
+  .nav ul a{color:var(--text-2-on-dark)}
+  .nav ul a:hover{color:var(--text-on-dark)}
+  .nav-toggle{border-color:var(--line-dark-strong);color:var(--text-on-dark)}
+  .nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{background:var(--text-on-dark)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+  .logo{display:flex;align-items:center;gap:16px;color:var(--text);min-width:0;text-decoration:none}
+  .logo img{height:56px;width:auto;flex-shrink:0;display:block}
+  .logo .name{display:flex;flex-direction:column;line-height:1;min-width:0}
+  .logo .name .a{
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:13px;letter-spacing:.04em;
+    text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text);
+  }
+  .logo .name .b{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);margin-top:5px;font-weight:500;
+  }
+  .nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0;padding:0}
+  .nav-toggle:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+  .nav-toggle span{display:block;width:18px;height:2px;background:#fff;position:relative}
+  .nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:#fff}
+  .nav-toggle span::before{top:-6px}
+  .nav-toggle span::after{top:6px}
+  .nav ul{
+    list-style:none;display:flex;gap:6px;
+    font-family:"Heebo",sans-serif;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;
+  }
+  .nav ul a{padding:10px 14px;display:inline-block;color:var(--text-on-dark);transition:color .2s;opacity:.85}
+  .nav ul a:hover{color:var(--text-on-dark);opacity:1}
+  .nav-cta{display:flex;align-items:center;gap:14px;flex-shrink:0}
+  .btn-register{
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;
+    background:var(--red);color:#fff;padding:14px 22px;display:inline-flex;align-items:center;gap:10px;
+    transition:background .2s;
+  }
+  .btn-register:hover{background:var(--red-2)}
+  .btn-register .arrow{font-family:"Merriweather",serif;font-style:italic;font-weight:400;font-size:16px}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:96px 0 120px;color:var(--text-on-dark);
+    background:
+      linear-gradient(180deg,rgba(3,12,64,.94) 0%,rgba(3,12,64,.97) 100%),
+      linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.55) 100%),
+      url("https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6755c6402eca5a31b7fcd995_WMC%20777%20Route.jpg") center/cover no-repeat,
+      var(--navy-deep);
+    border-bottom:1px solid var(--navy-deep);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse 50% 35% at 30% 35%,rgba(211,34,37,.14),transparent 60%);
+  }
+  .hero-inner{position:relative;display:grid;grid-template-columns:48px 1fr;gap:32px}
+  .hero-rail{
+    border-right:1px solid var(--line-dark);position:relative;min-height:560px;
+  }
+  .hero-rail .rotated{
+    position:absolute;left:50%;top:50%;
+    transform:translate(-50%,-50%) rotate(-90deg);
+    transform-origin:center;
+    font-family:"Heebo",sans-serif;
+    font-size:10px;letter-spacing:.4em;text-transform:uppercase;
+    white-space:nowrap;color:var(--mute-on-dark);
+  }
+  .hero-rail .rotated b{color:var(--red);font-weight:600}
+
+  .hero-content{padding:0 0 96px;max-width:none}
+
+  .hero-flex{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+    position:relative;z-index:2;
+  }
+  .hero-text{min-width:0}
+  .hero-video{
+    position:relative;
+    aspect-ratio:16/10;
+    background:var(--navy-deep);
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 80px rgba(211,34,37,.08);
+    overflow:hidden;
+  }
+  .hero-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .hero-video::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+  .hero-video .badge{
+    position:absolute;top:14px;left:14px;z-index:5;
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:#fff;background:rgba(0,0,0,.55);padding:8px 12px;backdrop-filter:blur(8px);
+    pointer-events:none;font-weight:600;display:inline-flex;align-items:center;gap:8px;
+  }
+  .hero-video .badge .dot{
+    width:6px;height:6px;background:var(--red);border-radius:50%;
+    box-shadow:0 0 0 3px rgba(211,34,37,.35);animation:hero-pulse 2s ease-in-out infinite;
+  }
+  @keyframes hero-pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:32px;
+    padding-bottom:24px;margin-bottom:32px;border-bottom:1px solid var(--line-dark);
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-2-on-dark);
+  }
+  .hero-meta div{display:flex;align-items:center;gap:10px}
+  .hero-meta .k{color:var(--mute-on-dark);font-weight:600}
+  .hero-meta .red{color:var(--red);font-weight:700}
+
+  .hero-eyebrow{margin-bottom:24px}
+
+  .hero-title{
+    font-family:"Montserrat",sans-serif;
+    font-weight:800;
+    font-size:clamp(40px,5vw,76px);
+    line-height:1.05;letter-spacing:-.025em;
+    margin:0 0 24px;color:var(--text-on-dark);
+  }
+  .hero-title .ln{display:block;position:relative}
+  .hero-title .ln-777{font-size:.85em;line-height:1.05;margin-bottom:6px}
+  .hero-title sup.tm{
+    font-family:"Montserrat",sans-serif;
+    font-size:.36em;font-weight:700;letter-spacing:0;
+    vertical-align:top;margin-left:4px;opacity:.85;
+    position:relative;top:.18em;
+  }
+  .hero-lede{color:var(--text-2-on-dark)}
+  .hero-lede em{color:var(--text-on-dark)}
+
+  .hero-sub{
+    font-family:"Montserrat",sans-serif;font-weight:700;
+    font-size:clamp(12px,1.15vw,17px);letter-spacing:.02em;
+    text-transform:uppercase;color:var(--text-on-dark);
+    margin:0 0 12px;line-height:1.2;white-space:nowrap;
+  }
+  .hero-sub .sep{color:var(--red);margin:0 8px;font-weight:900}
+  .hero-lede{
+    font-family:"Montserrat",sans-serif;font-size:clamp(15px,1.4vw,18px);
+    line-height:1.6;color:var(--text-2-on-dark);max-width:60ch;font-weight:400;
+    margin:24px 0 0;
+  }
+  .hero-lede em{font-style:italic;color:#fff;font-weight:600}
+  .hero-lede .red{color:var(--red);font-weight:600}
+
+  .hero-cta-row{
+    display:flex;flex-wrap:wrap;gap:24px;align-items:center;
+    margin-top:36px;
+  }
+  .btn-primary{
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;
+    background:var(--red);color:#fff;padding:18px 28px;display:inline-flex;align-items:center;gap:14px;
+    transition:.2s;
+  }
+  .btn-primary:hover{background:var(--red-2);transform:translateY(-2px)}
+  .btn-primary .arrow{font-family:"Merriweather",serif;font-style:italic;font-weight:400;font-size:22px;transition:transform .2s}
+  .btn-primary:hover .arrow{transform:translate(4px,-4px)}
+  .btn-ghost{
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:16px;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--ink);padding:16px 0;border-bottom:2px solid var(--ink);display:inline-flex;align-items:baseline;gap:10px;
+    transition:.2s;
+  }
+  .btn-ghost:hover{color:var(--red);border-color:var(--red)}
+  .btn-ghost .arrow{font-family:"Merriweather",serif;font-style:italic;font-weight:400;transition:transform .2s}
+  .btn-ghost:hover .arrow{transform:translate(4px,-4px)}
+  .hero .btn-ghost{color:var(--text-on-dark);border-color:var(--text-on-dark)}
+  .hero .btn-ghost:hover{color:var(--red);border-color:var(--red)}
+
+  .hero-tag{
+    margin-left:auto;
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--mute-on-dark);
+  }
+  .hero-tag b{color:var(--text-on-dark);font-weight:700}
+
+  /* ============ TAGLINE QUOTE ============ */
+  .tagline{
+    background:var(--bg);color:var(--text);
+    padding:96px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+    position:relative;
+  }
+  .tagline::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:1px;
+    background:linear-gradient(90deg,transparent 0%,var(--red) 50%,transparent 100%);
+  }
+  .tagline-inner{
+    text-align:center;
+    font-family:"Montserrat",sans-serif;font-weight:900;
+    font-size:clamp(28px,4.4vw,64px);line-height:1.05;letter-spacing:-.025em;
+    text-transform:uppercase;color:var(--ink);
+  }
+  .tagline-inner em{font-family:"Merriweather",serif;font-style:italic;font-weight:300;text-transform:lowercase;color:var(--red)}
+  .tagline-inner em{font-style:italic;color:var(--red);font-weight:600}
+  .tagline-credit{
+    margin-top:36px;
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--mute);text-align:center;
+  }
+  .tagline-credit b{color:var(--text);font-weight:700}
+
+  /* ============ SECTIONS ============ */
+  section{padding:96px 0;position:relative}
+  .section-head{margin-bottom:48px;max-width:920px}
+  .section-title{
+    font-family:"Montserrat",sans-serif;
+    font-weight:900;font-size:clamp(28px,3.6vw,56px);line-height:.95;letter-spacing:-.02em;
+    text-transform:uppercase;margin:14px 0 0;color:var(--text);
+  }
+  .section-title .it{
+    font-family:"Merriweather",serif;font-style:italic;font-weight:900;
+    color:var(--red);text-transform:lowercase;letter-spacing:-.02em;
+    font-variation-settings:"opsz" 144,"SOFT" 100;
+  }
+  .section-title .stroke{color:var(--ink)}
+  .section-head .sub{
+    margin-top:24px;
+    font-family:"Montserrat",sans-serif;
+    font-size:16px;line-height:1.65;color:var(--text-2);
+    max-width:62ch;font-weight:400;
+  }
+
+  /* ============ THREE PILLARS ============ */
+  .pillars{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+    background:var(--bg);
+  }
+  .pillar{
+    padding:64px 40px 56px;
+    border-right:1px solid var(--line);
+    position:relative;overflow:hidden;
+    transition:background .3s ease;
+  }
+  .pillar:last-child{border-right:0}
+  .pillar:hover{background:var(--bg-2)}
+  .pillar .num{
+    font-family:"Montserrat",sans-serif;font-weight:900;
+    font-size:clamp(80px,10vw,140px);line-height:.9;letter-spacing:-.04em;
+    color:var(--navy);margin-bottom:24px;
+  }
+  .pillar .lbl{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--red);font-weight:500;margin-bottom:10px;
+  }
+  .pillar .tt{
+    font-family:"Montserrat",sans-serif;font-weight:800;
+    font-size:clamp(20px,1.8vw,28px);text-transform:uppercase;letter-spacing:-.005em;line-height:1.1;
+    color:var(--text);margin-bottom:14px;
+  }
+  .pillar .desc{
+    font-family:"Montserrat",sans-serif;font-size:15px;line-height:1.65;color:var(--text-2);font-weight:400;
+  }
+  .pillar::after{
+    content:"";position:absolute;top:32px;right:32px;
+    width:8px;height:8px;background:var(--red);border-radius:50%;
+    box-shadow:0 0 0 4px rgba(211,34,37,.2);
+  }
+
+  /* ============ KOSTON QUOTE ============ */
+  .quote-block{
+    background:var(--panel);color:var(--ink);
+    padding:120px 0;
+    position:relative;overflow:hidden;
+  }
+  .quote-block::before{
+    content:""; position:absolute;top:0;left:0;width:120px;height:6px;background:var(--red);
+  }
+  .quote-grid{
+    display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:end;
+  }
+  .quote-text{
+    font-family:"Merriweather",serif;font-style:italic;font-weight:300;
+    font-size:clamp(22px,2.6vw,38px);line-height:1.25;letter-spacing:-.01em;
+    color:var(--ink);
+  }
+  .quote-text::before{
+    content:"\201C";display:inline;color:var(--red);font-style:italic;font-weight:600;font-size:1.1em;
+    margin-right:6px;line-height:.5;vertical-align:-.05em;
+  }
+  .quote-text::after{
+    content:"\201D";display:inline;color:var(--red);font-style:italic;font-weight:600;font-size:1.1em;
+    line-height:.5;vertical-align:-.05em;
+  }
+  .quote-attr{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:#5b6072;line-height:1.7;
+  }
+  .quote-attr b{
+    display:block;
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:18px;letter-spacing:.01em;
+    color:var(--ink);text-transform:uppercase;margin-bottom:8px;
+  }
+  .quote-attr .runbuk{
+    margin-top:18px;padding-top:14px;border-top:1px solid rgba(0,0,0,.15);
+    color:var(--red);font-weight:700;
+  }
+
+  /* ============ PRESS / FEATURED ON ============ */
+  .featured{
+    background:var(--bg);padding:96px 0 0;color:var(--text);
+  }
+  .featured-head h3{color:var(--ink)}
+  .featured-link{color:var(--mute)}
+  .featured-link:hover{color:var(--red)}
+  .featured-head{
+    display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px;
+    padding-bottom:48px;
+  }
+  .featured-head h3{
+    font-family:"Montserrat",sans-serif;font-weight:900;
+    font-size:clamp(22px,2.6vw,36px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;
+    color:var(--text);
+  }
+  .featured-head h3 .it{
+    font-family:"Merriweather",serif;font-style:italic;font-weight:900;color:var(--red);text-transform:lowercase;
+  }
+  .featured-link{
+    font-family:"Heebo",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--text-2);font-weight:500;display:inline-flex;gap:10px;align-items:baseline;
+    border-bottom:1px solid var(--red);padding-bottom:6px;
+    transition:color .2s;
+  }
+  .featured-link:hover{color:var(--red)}
+  .featured-link .arrow{font-family:"Merriweather",serif;font-style:italic;font-weight:400;font-size:14px}
+
+  .marquee-wrap{
+    border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+    overflow:hidden;background:var(--bg);
+  }
+  .marquee-cell{color:var(--ink)!important}
+  .marquee-row{display:flex;animation:marquee 50s linear infinite;will-change:transform}
+  .marquee-row:hover{animation-play-state:paused}
+  .marquee-cell{
+    flex-shrink:0;padding:32px 56px;
+    border-right:1px solid var(--line);
+    display:grid;place-items:center;min-width:240px;
+    color:var(--text-2);
+    font-size:clamp(15px,1.4vw,22px);
+    font-family:Georgia,"Times New Roman",serif;font-weight:700;letter-spacing:-.005em;
+    white-space:nowrap;
+  }
+  .marquee-cell.sans{font-family:"Montserrat",sans-serif;letter-spacing:.04em;text-transform:uppercase;font-weight:900}
+  .marquee-cell.italic{font-style:italic;font-family:"Merriweather",serif;font-weight:600}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ============ LOCATIONS ============ */
+  .locations{padding:120px 0;background:var(--navy);color:var(--text-on-dark);position:relative;overflow:hidden}
+  .locations::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(135deg,rgba(255,255,255,.02) 0%,transparent 60%)}
+  .locations .section-title{color:var(--text-on-dark)}
+  .locations .section-head .sub{color:var(--text-2-on-dark)}
+  .loc-grid{
+    display:grid;grid-template-columns:repeat(7,1fr);
+    border-top:1px solid var(--line-dark);
+  }
+  .loc{
+    padding:36px 24px 32px;
+    border-right:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark);
+    background:transparent;position:relative;overflow:hidden;
+    transition:.3s;min-height:280px;display:flex;flex-direction:column;
+  }
+  .loc:last-child{border-right:0}
+  .loc:hover{background:rgba(255,255,255,.04)}
+  .loc .city{color:var(--text-on-dark)!important}
+  .loc .country{color:var(--text-2-on-dark)!important}
+  .loc .continent{color:var(--mute-on-dark)!important}
+  .loc .ord{color:var(--text-on-dark)!important;opacity:.12!important}
+  .loc-distance{color:var(--text-2-on-dark)!important}
+  .loc-distance b{color:var(--text-on-dark)!important}
+  .locations .featured-link{color:var(--text-2-on-dark)}
+  .locations .featured-link:hover{color:var(--text-on-dark)}
+  .loc .flag{
+    width:56px;height:56px;border-radius:50%;
+    background-size:cover;background-position:center;
+    border:2px solid rgba(255,255,255,.85);
+    box-shadow:0 4px 14px rgba(0,0,0,.25);
+    margin-bottom:20px;flex-shrink:0;
+    transition:transform .3s ease;
+  }
+  .loc:hover .flag{transform:scale(1.06)}
+  .loc .leg{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--red);font-weight:500;margin-bottom:14px;
+  }
+  .loc .continent{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);margin-bottom:12px;
+  }
+  .loc .city{
+    font-family:"Montserrat",sans-serif;font-weight:800;
+    font-size:clamp(20px,1.8vw,28px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.05;
+    color:var(--text);margin-bottom:8px;
+  }
+  .loc .country{
+    font-family:"Montserrat",sans-serif;font-size:13px;color:var(--text-2);font-weight:500;
+    letter-spacing:.01em;
+  }
+  .loc .ord{
+    margin-top:auto;
+    font-family:"Montserrat",sans-serif;font-weight:900;font-size:48px;letter-spacing:-.04em;
+    line-height:.85;color:var(--text);opacity:.08;
+    align-self:flex-end;
+  }
+  .loc-foot{
+    margin-top:48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;
+  }
+  .loc-distance{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);
+  }
+  .loc-distance b{color:var(--text);font-weight:700}
+
+  /* ============ INSPIRATION / RECORDS ============ */
+  .records{padding:120px 0;background:var(--bg);color:var(--text)}
+  .records .section-title{color:var(--ink)}
+  .records .section-head .sub{color:var(--text-2)}
+  .rec-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+    border-top:2px solid var(--ink);
+  }
+  .rec{
+    padding:0;
+    display:flex;flex-direction:column;gap:0;min-height:340px;
+    transition:.25s;position:relative;overflow:hidden;
+    color:#fff;text-decoration:none;
+    background:var(--navy-deep) center/cover no-repeat;
+  }
+  .rec::before{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.05) 35%,rgba(0,0,0,.6) 65%,rgba(0,0,0,.95) 100%);
+    transition:.3s;
+  }
+  .rec:hover::before{
+    background:linear-gradient(180deg,rgba(4,18,89,.15) 0%,rgba(4,18,89,.5) 50%,rgba(4,18,89,.92) 100%);
+  }
+  .rec-body{
+    position:relative;z-index:2;margin-top:auto;
+    padding:22px 22px 24px;
+    display:flex;flex-direction:column;gap:0;
+  }
+  .rec .tag{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+    color:#fff;font-weight:600;opacity:.95;
+  }
+  .rec-divider{
+    width:42px;height:3px;background:var(--red);margin:12px 0 14px;
+  }
+  .rec .name{
+    font-family:"Montserrat",sans-serif;font-weight:700;
+    font-size:18px;line-height:1.25;color:#fff;letter-spacing:.005em;
+  }
+  .rec .name em{font-style:normal;color:#fff}
+  .rec .val{
+    font-family:"Montserrat",sans-serif;font-weight:600;
+    font-size:15px;line-height:1.3;color:#fff;letter-spacing:.005em;margin-top:6px;opacity:.92;
+  }
+  .rec .val .red{color:#ff5b56}
+
+  /* ============ SOCIAL ============ */
+  .social{padding:120px 0;background:var(--bg);color:var(--text)}
+  .social .social-handle{color:var(--ink)}
+  .social-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px;margin-bottom:48px}
+  .social-handle{
+    font-family:"Montserrat",sans-serif;font-weight:800;
+    font-size:clamp(16px,1.4vw,22px);text-transform:uppercase;letter-spacing:.005em;
+    color:var(--text);display:inline-flex;align-items:center;gap:10px;
+  }
+  .social-handle .check{
+    width:22px;height:22px;background:var(--red);color:#fff;border-radius:50%;
+    display:grid;place-items:center;font-family:"Merriweather",serif;font-style:italic;font-size:14px;font-weight:700;
+  }
+  .ig-grid{
+    display:grid;grid-template-columns:repeat(6,1fr);gap:8px;
+  }
+  .ig{
+    aspect-ratio:1/1;background:var(--navy);position:relative;overflow:hidden;
+    background-image:repeating-linear-gradient(45deg,#0a1a6a 0 12px,#081761 12px 24px);
+    transition:.3s;cursor:pointer;
+  }
+  .ig::after{
+    content:attr(data-tag);position:absolute;left:14px;bottom:14px;
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:#fff;opacity:.75;
+  }
+  .ig.red{background-image:repeating-linear-gradient(45deg,#d32225 0 12px,#a8221a 12px 24px)}
+  .ig:hover{transform:scale(.98)}
+
+  /* ============ CLUB / WALL OF LEGENDS ============ */
+  .club{
+    padding:120px 0;
+    background:var(--ink);color:var(--text-on-dark);
+    position:relative;overflow:hidden;
+  }
+  .club::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;
+    background:repeating-linear-gradient(90deg,var(--red) 0 60px,transparent 60px 80px);
+  }
+  .club-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  }
+  .club-stat{
+    font-family:"Montserrat",sans-serif;font-weight:900;
+    font-size:clamp(80px,11vw,160px);line-height:.9;letter-spacing:-.05em;
+    color:var(--text-on-dark);
+    margin-bottom:16px;
+  }
+  .club-stat .red{color:var(--red)}
+  .club .club-h{color:var(--text-on-dark)}
+  .club .club-meta{color:var(--mute-on-dark)}
+  .club .club-meta b{color:var(--text-on-dark)}
+  .club .club-split{border-color:var(--line-dark)}
+  .club .club-split .k{color:var(--mute-on-dark)}
+  .club .club-split .v{color:var(--text-on-dark)}
+  .club .btn-ghost{color:var(--text-on-dark);border-color:var(--text-on-dark)}
+  .club .btn-ghost:hover{color:var(--red);border-color:var(--red)}
+  .club-h{
+    font-family:"Montserrat",sans-serif;font-weight:900;
+    font-size:clamp(24px,2.6vw,40px);text-transform:uppercase;letter-spacing:-.015em;line-height:1.05;
+    color:var(--text);margin:0 0 16px;
+  }
+  .club-h .it{font-family:"Merriweather",serif;font-style:italic;font-weight:900;color:var(--red);text-transform:lowercase}
+  .club-meta{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);margin:24px 0 32px;line-height:1.8;
+  }
+  .club-meta b{color:var(--text);font-weight:700}
+  .club-split{
+    display:grid;grid-template-columns:1fr 1fr;gap:24px;
+    border:1px solid var(--line);padding:24px;margin:32px 0;
+  }
+  .club-split .k{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);font-weight:500;
+  }
+  .club-split .v{
+    font-family:"Montserrat",sans-serif;font-weight:900;font-size:36px;letter-spacing:-.025em;line-height:1;
+    color:var(--text);margin-top:8px;
+  }
+  .club-split .v .red{color:var(--red)}
+
+  /* ============ LEGACY TIMELINE ============ */
+  .legacy{padding:120px 0;background:var(--bg-3);color:var(--text)}
+  .legacy .section-title{color:var(--ink)}
+  .yr-grid{
+    display:grid;grid-template-columns:repeat(10,1fr);gap:0;
+    border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:var(--bg);
+    margin-top:48px;
+  }
+  .yr{
+    padding:36px 16px;
+    border-right:1px solid var(--line);
+    text-align:center;
+    transition:.25s;cursor:pointer;
+    position:relative;
+  }
+  .yr:last-child{border-right:0}
+  .yr:hover{background:rgba(211,34,37,.06)}
+  .yr .y{
+    font-family:"Montserrat",sans-serif;font-weight:800;
+    font-size:clamp(18px,2vw,30px);letter-spacing:-.02em;line-height:1;
+    color:var(--ink);
+  }
+  .yr .lbl{
+    font-family:"Heebo",sans-serif;font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);margin-top:10px;
+  }
+  .yr.current .y{color:var(--red)}
+  .yr.current{background:rgba(211,34,37,.08)}
+  .yr.current::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--red);
+  }
+
+  /* ============ JOURNEY VIDEO ============ */
+  .journey{padding:120px 0;background:var(--bg);position:relative;overflow:hidden;color:var(--text)}
+  .journey .section-title{color:var(--ink)}
+  .journey .section-head.sub,.journey .sub{color:var(--text-2)}
+  .journey .btn-ghost{color:var(--ink);border-color:var(--ink)}
+  .journey .btn-ghost:hover{color:var(--red);border-color:var(--red)}
+  .journey-grid{
+    display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;
+  }
+  .journey-video{
+    aspect-ratio:16/10;
+    background:var(--navy);
+    background-image:
+      linear-gradient(135deg,rgba(255,255,255,.04) 0%,rgba(0,0,0,.5) 100%),
+      repeating-linear-gradient(45deg,#0a1a6a 0 14px,#081761 14px 28px);
+    position:relative;cursor:pointer;
+    border:1px solid var(--ink);
+    transition:.3s;
+  }
+  .journey-video:hover{transform:translateY(-4px)}
+  .journey-video::after{
+    content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:96px;height:96px;background:var(--red);border-radius:50%;
+    box-shadow:0 0 0 12px rgba(211,34,37,.18),0 0 60px rgba(211,34,37,.45);
+  }
+  .journey-video::before{
+    content:"";position:absolute;left:50%;top:50%;transform:translate(-30%,-50%);z-index:2;
+    width:0;height:0;border-left:24px solid #fff;border-top:14px solid transparent;border-bottom:14px solid transparent;
+  }
+  .journey-tag{
+    position:absolute;top:18px;left:18px;
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--text);background:rgba(0,0,0,.5);padding:8px 12px;backdrop-filter:blur(6px);
+  }
+
+  /* ============ WHO WE ARE / RUNBUK ============ */
+  .who{
+    background:var(--panel);color:var(--ink);
+    padding:120px 0;position:relative;overflow:hidden;
+  }
+  .who-grid{
+    display:grid;grid-template-columns:1fr 1.4fr;gap:96px;align-items:center;
+  }
+  .who-left{
+    border-right:1px solid rgba(0,0,0,.12);padding-right:96px;
+  }
+  .who-tag{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+    color:#5b6072;margin-bottom:18px;
+  }
+  .who-logo{
+    max-width:340px;width:100%;height:auto;display:block;margin-bottom:8px;
+  }
+  .who-tagline{
+    font-family:"Merriweather",serif;font-style:italic;font-weight:300;
+    font-size:clamp(22px,2.4vw,36px);line-height:1.2;letter-spacing:-.01em;color:var(--ink);
+    margin-bottom:32px;
+  }
+  .who-body{
+    font-family:"Montserrat",sans-serif;font-size:16px;line-height:1.65;color:#2a2a30;font-weight:400;
+    max-width:54ch;
+  }
+  .who-cta{
+    margin-top:32px;display:inline-flex;align-items:baseline;gap:12px;
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;
+    color:var(--ink);border-bottom:2px solid var(--red);padding-bottom:6px;
+  }
+  .who-cta:hover{color:var(--red)}
+  .who-cta .arrow{font-family:"Merriweather",serif;font-style:italic;font-weight:400;transition:transform .2s}
+  .who-cta:hover .arrow{transform:translate(4px,-4px)}
+
+  /* ============ UPCOMING EVENTS ============ */
+  .events{padding:120px 0;background:var(--bg);color:var(--text)}
+  .events .section-title{color:var(--ink)}
+  .events-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:32px;margin-bottom:48px}
+  .events-tag{
+    font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);
+  }
+  .events-tag b{color:var(--red);font-weight:700}
+  .events-scroll{
+    display:flex;gap:24px;overflow-x:auto;padding:0 0 16px;
+    scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent;
+    margin:0 -40px;padding:0 40px 16px;
+  }
+  .events-scroll::-webkit-scrollbar{height:6px}
+  .events-scroll::-webkit-scrollbar-track{background:transparent}
+  .events-scroll::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:3px}
+  .ev-card{
+    flex:0 0 320px;
+    background:var(--bg-2);border:1px solid var(--line);
+    padding:28px 26px 24px;display:flex;flex-direction:column;gap:14px;min-height:280px;
+    transition:.3s;position:relative;overflow:hidden;
+  }
+  .ev-card::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--red);transition:width .35s}
+  .ev-card:hover::before{width:100%}
+  .ev-card:hover{transform:translateY(-4px);background:var(--navy);color:var(--text-on-dark)}
+  .ev-card:hover .ev-name{color:var(--text-on-dark)}
+  .ev-card:hover .ev-loc{color:var(--text-2-on-dark)}
+  .ev-card:hover .ev-arrow{color:var(--text-2-on-dark)}
+  .ev-name{color:var(--ink)}
+  .ev-loc{color:var(--text-2)}
+  .ev-date{
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--red);font-weight:500;
+  }
+  .ev-name{
+    font-family:"Montserrat",sans-serif;font-weight:800;
+    font-size:clamp(16px,1.4vw,22px);text-transform:uppercase;letter-spacing:-.01em;line-height:1.15;
+    color:var(--text);
+  }
+  .ev-loc{
+    font-family:"Montserrat",sans-serif;font-size:13px;color:var(--text-2);font-weight:500;
+    letter-spacing:.01em;
+  }
+  .ev-arrow{
+    margin-top:auto;
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mute);display:flex;align-items:center;gap:10px;
+  }
+  .ev-arrow::after{content:"→";font-family:"Merriweather",serif;font-style:italic;font-size:14px}
+  .events-foot{
+    margin-top:36px;text-align:center;
+    font-family:"Heebo",sans-serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);
+  }
+  .events-foot b{color:var(--text);font-weight:700}
+
+  /* ============ CTA STRIP ============ */
+  .cta-strip{
+    background:var(--red);color:#fff;
+    padding:80px 0;
+    border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+    position:relative;overflow:hidden;
+  }
+  .cta-strip-inner{
+    display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:32px;
+  }
+  .cta-strip h3{
+    font-family:"Montserrat",sans-serif;font-weight:900;
+    font-size:clamp(26px,3vw,44px);text-transform:uppercase;letter-spacing:-.02em;line-height:1.05;
+    color:#fff;
+  }
+  .cta-strip h3 .it{font-family:"Merriweather",serif;font-style:italic;font-weight:900;text-transform:lowercase}
+  .btn-white{
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;text-transform:uppercase;
+    background:#fff;color:var(--ink);padding:18px 28px;display:inline-flex;align-items:center;gap:14px;
+    transition:.2s;
+  }
+  .btn-white:hover{background:var(--ink);color:#fff}
+  .btn-white .arrow{font-family:"Merriweather",serif;font-style:italic;font-weight:400;font-size:22px}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--navy);color:var(--text-2-on-dark);padding:80px 0 32px;
+    border-top:1px solid var(--navy-deep);
+    font-family:"Heebo",sans-serif;font-size:12px;letter-spacing:.04em;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--line-dark);
+  }
+  .foot-brand{display:flex;flex-direction:column;gap:18px}
+  .foot-brand .row{display:flex;gap:14px;align-items:center}
+  .foot-brand img.foot-logo{height:64px;width:auto;display:block;flex-shrink:0}
+  .foot-runbuk{display:flex;align-items:center;gap:14px;margin-top:6px;padding-top:14px;border-top:1px solid var(--line-dark)}
+  .foot-runbuk img{height:18px;width:auto;display:block;filter:brightness(0) invert(1);opacity:.85}
+  .foot-runbuk .lbl{font-family:"Heebo",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute-on-dark);font-weight:500}
+  .foot-brand strong{
+    font-family:"Montserrat",sans-serif;font-weight:900;font-size:16px;text-transform:uppercase;letter-spacing:.02em;
+    color:var(--text-on-dark);display:block;
+  }
+  .foot-brand .ml{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute-on-dark);margin-top:4px}
+  .foot-brand .mission{
+    font-family:"Montserrat",sans-serif;font-weight:400;font-size:13px;line-height:1.6;color:var(--text-2-on-dark);
+    max-width:36ch;margin-top:8px;
+  }
+  .foot-col h4{
+    font-family:"Montserrat",sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--text-on-dark);margin-bottom:18px;
+  }
+  .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot-col a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2-on-dark);transition:color .2s}
+  .foot-col a:hover{color:var(--red)}
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+    padding-top:24px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute-on-dark);
+  }
+  .foot-bottom a{color:var(--text-2-on-dark);border-bottom:1px solid var(--red);padding-bottom:2px}
+  .socials{display:flex;gap:14px}
+  .socials a{
+    width:36px;height:36px;border:1px solid var(--line-dark-strong);display:grid;place-items:center;color:var(--text-2-on-dark);
+    font-family:"Merriweather",serif;font-style:italic;font-weight:600;font-size:14px;
+    transition:.2s;
+  }
+  .socials a:hover{background:var(--red);border-color:var(--red);color:#fff}
+
+  /* ============ REVEAL ============ */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  .reveal-d1{transition-delay:.08s}
+  .reveal-d2{transition-delay:.18s}
+  .reveal-d3{transition-delay:.28s}
+  .reveal-d4{transition-delay:.38s}
+
+  @media (prefers-reduced-motion:reduce){
+    .ticker,.marquee-row{animation:none}
+    .reveal{opacity:1;transform:none}
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1100px){
+    .nav ul{display:none}
+    .nav-toggle{display:flex}
+    .nav ul{
+      position:absolute;top:84px;left:0;right:0;flex-direction:column;gap:0;
+      background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px 24px;
+    }
+    .nav ul.open{display:flex}
+    .nav ul li{border-bottom:1px solid var(--line)}
+    .nav ul a{display:block;padding:16px 0;font-size:12px}
+    .pillars{grid-template-columns:1fr}
+    .pillar{border-right:0;border-bottom:1px solid var(--line)}
+    .pillar:last-child{border-bottom:0}
+    .hero-flex{grid-template-columns:1fr;gap:32px}
+    .hero-video{order:2;max-width:680px}
+    .quote-grid{grid-template-columns:1fr;gap:48px}
+    .loc-grid{grid-template-columns:repeat(4,1fr)}
+    .loc:nth-child(4n){border-right:0}
+    .rec-grid{grid-template-columns:repeat(2,1fr)}
+    .rec{min-height:300px}
+    .ig-grid{grid-template-columns:repeat(4,1fr)}
+    .club-grid{grid-template-columns:1fr;gap:48px}
+    .yr-grid{grid-template-columns:repeat(5,1fr)}
+    .yr:nth-child(5){border-right:0}
+    .yr:nth-child(n+6){border-top:1px solid var(--line)}
+    .journey-grid{grid-template-columns:1fr;gap:48px}
+    .who-grid{grid-template-columns:1fr;gap:48px}
+    .who-left{border-right:0;padding-right:0;padding-bottom:48px;border-bottom:1px solid rgba(0,0,0,.12)}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+  }
+  @media (max-width:820px){
+    .wrap{padding:0 24px}
+    section{padding:80px 0}
+    .nav-inner{height:72px}
+    .nav-cta{display:none}
+    .hero{padding:64px 0 0}
+    .hero-inner{grid-template-columns:1fr}
+    .hero-rail{display:none}
+    .hero-content{padding-bottom:64px}
+    .hero-title{font-size:clamp(32px,8vw,52px)}
+    .tagline{padding:64px 0}
+    .quote-block{padding:80px 0}
+    .featured-head{flex-direction:column;align-items:flex-start}
+    .loc-grid{grid-template-columns:repeat(2,1fr)}
+    .loc:nth-child(2n){border-right:0}
+    .rec-grid{grid-template-columns:1fr}
+    .ig-grid{grid-template-columns:repeat(3,1fr)}
+    .yr-grid{grid-template-columns:repeat(3,1fr)}
+    .yr{border-right:1px solid var(--line)!important}
+    .yr:nth-child(3n){border-right:0!important}
+    .yr:nth-child(n+4){border-top:1px solid var(--line)}
+    .foot-grid{grid-template-columns:1fr;gap:32px}
+    .who{padding:80px 0}
+    .who-tagline{font-size:clamp(20px,5vw,28px)}
+    .events-scroll{margin:0 -24px;padding:0 24px 16px}
+    .ev-card{flex:0 0 280px}
+    .club-stat{font-size:clamp(64px,18vw,120px)}
+    .club-split{grid-template-columns:1fr}
+    .cta-strip-inner{flex-direction:column;align-items:flex-start;gap:24px}
+  }
+  @media (max-width:480px){
+    .wrap{padding:0 20px}
+    .pillar{padding:48px 28px 40px}
+    .pillar .num{font-size:88px}
+    .loc{padding:24px 18px;min-height:220px}
+    .quote-text{font-size:clamp(20px,5vw,26px)}
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP TICKER -->
+<div class="top-strip" aria-hidden="true">
+  <div class="ticker">
+    <span>10th Edition · January 2027</span>
+    <span>Antarctica → Cape Town → Perth → Dubai → Madrid → Fortaleza → Miami</span>
+    <span>168 hours · 7 marathons · 7 continents</span>
+    <span>Registration Open</span>
+    <span>A RunBuk® Event</span>
+    <span>Established 2015</span>
+    <span>10th Edition · January 2027</span>
+    <span>Antarctica → Cape Town → Perth → Dubai → Madrid → Fortaleza → Miami</span>
+    <span>168 hours · 7 marathons · 7 continents</span>
+    <span>Registration Open</span>
+    <span>A RunBuk® Event</span>
+    <span>Established 2015</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo" aria-label="World Marathon Challenge">
+      <img src="https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/695cd1618f3b03dfc0b80a67_WMC%20777%20white.png" alt="World Marathon Challenge" />
+      <span class="name">
+        <span class="a">Edition 10 · 2027</span>
+        <span class="b">7·7·7 · January 30 — February 5</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle"><span></span></button>
+    <nav><ul id="navMenu">
+      <li><a href="#">Race Info</a></li>
+      <li><a href="#">Locations</a></li>
+      <li><a href="#">Competitors</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Media</a></li>
+      <li><a href="#">Clubs</a></li>
+    </ul></nav>
+    <div class="nav-cta">
+      <a href="#register" class="btn-register">Register Now <span class="arrow">→</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-rail"><div class="rotated">Edition 10 · <b>January 2027</b> · Established 2015</div></div>
+      <div class="hero-content">
+        <div class="hero-flex">
+          <div class="hero-text">
+
+            <span class="eyebrow hero-eyebrow reveal">7 Marathons · 7 Continents · 7 Days</span>
+
+            <h1 class="hero-title reveal reveal-d1">
+              <span class="ln ln-777">777<sup class="tm">™</sup></span>
+              <span class="ln">World Marathon</span>
+              <span class="ln">Challenge<sup class="tm">®</sup></span>
+            </h1>
+
+            <div class="hero-sub reveal reveal-d2">
+              7 Marathons<span class="sep">/</span>7 Continents<span class="sep">/</span>7 Consecutive Days<sup class="tm">®</sup>
+            </div>
+
+            <div class="hero-cta-row reveal reveal-d3">
+              <a href="#register" class="btn-primary">Register Now <span class="arrow">↗</span></a>
+            </div>
+
+          </div>
+
+          <div class="hero-video reveal reveal-d2">
+            <span class="badge"><span class="dot"></span>Live Footage · Edition 09</span>
+            <iframe src="https://player.vimeo.com/video/824943552?autoplay=1&loop=1&muted=1" allow="autoplay; fullscreen; picture-in-picture" loading="lazy" title="World Marathon Challenge"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAGLINE -->
+<section class="tagline">
+  <div class="wrap">
+    <div class="tagline-inner reveal">
+      Your potential <em>has no</em> limits.
+    </div>
+    <div class="tagline-credit reveal reveal-d1">A <b>RunBuk<sup class="tm">®</sup></b> event · since 2015</div>
+  </div>
+</section>
+
+<!-- THREE PILLARS -->
+<section style="padding:0">
+  <div class="wrap" style="padding:64px 0 0">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Challenge</span>
+      <h2 class="section-title">The <span class="it">rules</span> are simple.</h2>
+    </div>
+  </div>
+  <div class="pillars">
+    <div class="pillar reveal">
+      <div class="num">7</div>
+      <div class="lbl">01 / Marathons</div>
+      <div class="tt">Seven Marathons</div>
+      <div class="desc">Competitors must run seven full 42.2&nbsp;km marathons. No shortcuts. Each leg is officially measured and certified.</div>
+    </div>
+    <div class="pillar reveal reveal-d1">
+      <div class="num">7</div>
+      <div class="lbl">02 / Days</div>
+      <div class="tt">Seven Consecutive Days</div>
+      <div class="desc">Complete every marathon within seven days — or <strong style="color:var(--red);font-family:'JetBrains Mono',monospace">168 hours</strong> on the official race clock.</div>
+    </div>
+    <div class="pillar reveal reveal-d2">
+      <div class="num">7</div>
+      <div class="lbl">03 / Continents</div>
+      <div class="tt">Seven Continents</div>
+      <div class="desc">Antarctica, Africa, Australia, Asia, Europe, South America, and North America. One global circumnavigation.</div>
+    </div>
+  </div>
+</section>
+
+<!-- KOSTON QUOTE -->
+<section class="quote-block">
+  <div class="wrap">
+    <div class="quote-grid">
+      <div class="quote-text reveal">
+        Pushing beyond what you think is possible — that's where the real story lives. The 7·7·7 isn't a race. It's a redefinition.
+      </div>
+      <div class="quote-attr reveal reveal-d1">
+        <b>Eric Koston</b>
+        Skateboarder · Pro Athlete
+        <div class="runbuk">A RunBuk<sup class="tm">®</sup> Voice</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AS FEATURED ON -->
+<section class="featured" style="padding:120px 0 0">
+  <div class="wrap">
+    <div class="featured-head reveal">
+      <h3>As <span class="it">featured</span> on.</h3>
+      <a href="#" class="featured-link">Explore full press coverage <span class="arrow">↗</span></a>
+    </div>
+  </div>
+  <div class="marquee-wrap" aria-label="Featured media outlets">
+    <div class="marquee-row">
+      <div class="marquee-cell italic">Reuters</div>
+      <div class="marquee-cell sans">ESPN</div>
+      <div class="marquee-cell sans">BBC</div>
+      <div class="marquee-cell sans">CBS</div>
+      <div class="marquee-cell sans">CNN</div>
+      <div class="marquee-cell italic">The Washington Post</div>
+      <div class="marquee-cell italic">The New York Times</div>
+      <div class="marquee-cell italic">Runner's World</div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-cell italic" aria-hidden="true">Reuters</div>
+      <div class="marquee-cell sans" aria-hidden="true">ESPN</div>
+      <div class="marquee-cell sans" aria-hidden="true">BBC</div>
+      <div class="marquee-cell sans" aria-hidden="true">CBS</div>
+      <div class="marquee-cell sans" aria-hidden="true">CNN</div>
+      <div class="marquee-cell italic" aria-hidden="true">The Washington Post</div>
+      <div class="marquee-cell italic" aria-hidden="true">The New York Times</div>
+      <div class="marquee-cell italic" aria-hidden="true">Runner's World</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations" id="schedule">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Route</span>
+      <h2 class="section-title">Seven <span class="it">stages,</span><br>one circumnavigation.</h2>
+      <p class="sub">From the ice of Antarctica to the finish line in Miami — competitors travel more than 38,000&nbsp;km between marathons. Below, the official 2027 route in order.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc reveal">
+        <div class="flag" style="background-image:url('https://hatscripts.github.io/circle-flags/flags/aq.svg')"></div>
+        <div class="leg">Leg 01</div>
+        <div class="continent">Antarctica</div>
+        <div class="city">Ultima</div>
+        <div class="country"><em>Union Glacier base</em></div>
+        <div class="ord">01</div>
+      </div>
+      <div class="loc reveal reveal-d1">
+        <div class="flag" style="background-image:url('https://hatscripts.github.io/circle-flags/flags/za.svg')"></div>
+        <div class="leg">Leg 02</div>
+        <div class="continent">Africa</div>
+        <div class="city">Cape Town</div>
+        <div class="country"><em>South Africa</em></div>
+        <div class="ord">02</div>
+      </div>
+      <div class="loc reveal reveal-d2">
+        <div class="flag" style="background-image:url('https://hatscripts.github.io/circle-flags/flags/au.svg')"></div>
+        <div class="leg">Leg 03</div>
+        <div class="continent">Australia</div>
+        <div class="city">Perth</div>
+        <div class="country"><em>Western Australia</em></div>
+        <div class="ord">03</div>
+      </div>
+      <div class="loc reveal reveal-d3">
+        <div class="flag" style="background-image:url('https://hatscripts.github.io/circle-flags/flags/ae.svg')"></div>
+        <div class="leg">Leg 04</div>
+        <div class="continent">Asia</div>
+        <div class="city">Dubai</div>
+        <div class="country"><em>United Arab Emirates</em></div>
+        <div class="ord">04</div>
+      </div>
+      <div class="loc reveal reveal-d4">
+        <div class="flag" style="background-image:url('https://hatscripts.github.io/circle-flags/flags/es.svg')"></div>
+        <div class="leg">Leg 05</div>
+        <div class="continent">Europe</div>
+        <div class="city">Madrid</div>
+        <div class="country"><em>Spain</em></div>
+        <div class="ord">05</div>
+      </div>
+      <div class="loc reveal reveal-d4">
+        <div class="flag" style="background-image:url('https://hatscripts.github.io/circle-flags/flags/br.svg')"></div>
+        <div class="leg">Leg 06</div>
+        <div class="continent">South America</div>
+        <div class="city">Fortaleza</div>
+        <div class="country"><em>Brazil</em></div>
+        <div class="ord">06</div>
+      </div>
+      <div class="loc reveal reveal-d4">
+        <div class="flag" style="background-image:url('https://hatscripts.github.io/circle-flags/flags/us.svg')"></div>
+        <div class="leg">Leg 07</div>
+        <div class="continent">North America</div>
+        <div class="city">Miami</div>
+        <div class="country"><em>USA · Finish</em></div>
+        <div class="ord">07</div>
+      </div>
+    </div>
+    <div class="loc-foot">
+      <span class="loc-distance"><b>295 km</b> run · <b>38,000 km</b> travelled · 168 hour race clock</span>
+      <a href="#" class="featured-link">View detailed schedule <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- INSPIRATION / RECORDS -->
+<section class="records">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Inspiration</span>
+      <h2 class="section-title">Records of <span class="it">the field.</span></h2>
+      <p class="sub">Every record below was set on the official course. Each name a story of persistence — and of what happens when human limits get redrawn.</p>
+    </div>
+    <div class="rec-grid">
+      <a class="rec reveal" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6929f31019cf98d8f9be11b7_MW2.jpeg')">
+        <div class="rec-body">
+          <div class="tag">Fastest Avg. (Men)</div>
+          <div class="rec-divider"></div>
+          <div class="name">Michael Wardian</div>
+          <div class="val">2h 45m 57s</div>
+        </div>
+      </a>
+      <a class="rec reveal reveal-d1" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6928ec71b6df2b10003799ca_EST.jpeg')">
+        <div class="rec-body">
+          <div class="tag">Fastest Avg. (Women)</div>
+          <div class="rec-divider"></div>
+          <div class="name">Estefanía Ripoll</div>
+          <div class="val">3h 18m 30s</div>
+        </div>
+      </a>
+      <a class="rec reveal reveal-d2" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6928ed99ddb4c6672957a403_TM.jpeg')">
+        <div class="rec-body">
+          <div class="tag">Shortest Duration (Women)</div>
+          <div class="rec-divider"></div>
+          <div class="name">Tomomi Bitoh</div>
+          <div class="val">5d 19h 7m</div>
+        </div>
+      </a>
+      <a class="rec reveal reveal-d3" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6928ef92f921ca1a7b6963f9_sk.jpeg')">
+        <div class="rec-body">
+          <div class="tag">First Blind Athlete</div>
+          <div class="rec-divider"></div>
+          <div class="name">Sinéad Kane</div>
+          <div class="val">Pioneer</div>
+        </div>
+      </a>
+      <a class="rec reveal" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6996c33af0d9c4207ce74bc3_4b63dcc923fe2bbc4ba6cb9355ba2b512bdf3c9c.webp')">
+        <div class="rec-body">
+          <div class="tag">Fastest Couple</div>
+          <div class="rec-divider"></div>
+          <div class="name">Monica Righelli &amp; Serge Enckels</div>
+          <div class="val">2026 Edition</div>
+        </div>
+      </a>
+      <a class="rec reveal reveal-d1" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6988e7faeafb5b39825a35b6_631592848_1439950874444540_7148777438322540849_n.jpg')">
+        <div class="rec-body">
+          <div class="tag">Oldest Female Finisher</div>
+          <div class="rec-divider"></div>
+          <div class="name">Domitilia dos Santos</div>
+          <div class="val">70 years</div>
+        </div>
+      </a>
+      <a class="rec reveal reveal-d2" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/6928f21549a969dba3ee8175_dl.jpeg')">
+        <div class="rec-body">
+          <div class="tag">Oldest Male Finisher</div>
+          <div class="rec-divider"></div>
+          <div class="name">Dan Little</div>
+          <div class="val">80 years</div>
+        </div>
+      </a>
+      <a class="rec reveal reveal-d3" href="#" style="background-image:url('https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/69c38711239dcd167b74b6a3_grand%20slam.jpeg')">
+        <div class="rec-body">
+          <div class="tag">Grand Slam Finishers</div>
+          <div class="rec-divider"></div>
+          <div class="name">Class of 2026</div>
+          <div class="val">View all members</div>
+        </div>
+      </a>
+    </div>
+    <div style="margin-top:48px">
+      <a href="#" class="featured-link">Read every record &amp; story <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social">
+  <div class="wrap">
+    <div class="social-head reveal">
+      <div>
+        <span class="eyebrow">Field Notes</span>
+        <div class="social-handle" style="margin-top:14px">
+          @worldmarathonchallenge777 <span class="check">✓</span>
+        </div>
+      </div>
+      <a href="#" class="featured-link">Follow on Instagram <span class="arrow">↗</span></a>
+    </div>
+    <div class="ig-grid reveal">
+      <div class="ig" data-tag="01 / Ice"></div>
+      <div class="ig red" data-tag="02 / Cape Start"></div>
+      <div class="ig" data-tag="03 / Perth"></div>
+      <div class="ig" data-tag="04 / Desert"></div>
+      <div class="ig red" data-tag="05 / Madrid"></div>
+      <div class="ig" data-tag="06 / Beach"></div>
+      <div class="ig" data-tag="07 / Miami Finish"></div>
+      <div class="ig" data-tag="08 / Briefing"></div>
+      <div class="ig red" data-tag="09 / Medal"></div>
+      <div class="ig" data-tag="10 / Crew"></div>
+      <div class="ig" data-tag="11 / Recovery"></div>
+      <div class="ig" data-tag="12 / Sunrise"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLUB / WALL OF LEGENDS -->
+<section class="club">
+  <div class="wrap">
+    <div class="club-grid">
+      <div class="reveal">
+        <div class="club-stat"><span>2</span><span class="red">9</span><span>2</span></div>
+        <span class="eyebrow">Intercontinental Marathon Club<sup class="tm">®</sup></span>
+      </div>
+      <div class="reveal reveal-d1">
+        <h2 class="club-h">Cheers to <span class="it">all finishers</span> since 2015.</h2>
+        <div class="club-meta">
+          As of <b>February 6, 2026</b><br>
+          292 finishers · 50+ countries · 9 editions
+        </div>
+        <div class="club-split">
+          <div>
+            <div class="k">Men</div>
+            <div class="v">207</div>
+          </div>
+          <div>
+            <div class="k">Women</div>
+            <div class="v"><span class="red">85</span></div>
+          </div>
+        </div>
+        <a href="#" class="btn-ghost">View the Wall of Legends <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEGACY -->
+<section class="legacy">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Legacy · 777™</span>
+      <h2 class="section-title">A <span class="it">decade</span> of editions.</h2>
+    </div>
+    <div class="yr-grid reveal">
+      <div class="yr"><div class="y">2015</div><div class="lbl">Inaugural</div></div>
+      <div class="yr"><div class="y">2016</div><div class="lbl">Edition 02</div></div>
+      <div class="yr"><div class="y">2017</div><div class="lbl">Edition 03</div></div>
+      <div class="yr"><div class="y">2018</div><div class="lbl">Edition 04</div></div>
+      <div class="yr"><div class="y">2019</div><div class="lbl">Edition 05</div></div>
+      <div class="yr"><div class="y">2020</div><div class="lbl">Edition 06</div></div>
+      <div class="yr"><div class="y">2023</div><div class="lbl">Edition 07</div></div>
+      <div class="yr"><div class="y">2025</div><div class="lbl">Edition 08</div></div>
+      <div class="yr"><div class="y">2026</div><div class="lbl">Edition 09</div></div>
+      <div class="yr current"><div class="y">2027</div><div class="lbl">Edition 10</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY VIDEO -->
+<section class="journey">
+  <div class="wrap">
+    <div class="journey-grid">
+      <div class="journey-video reveal">
+        <span class="journey-tag">Featured Film · 04:32</span>
+      </div>
+      <div class="reveal reveal-d1">
+        <span class="eyebrow">An Unforgettable Journey</span>
+        <h2 class="section-title" style="margin-top:14px">No human <span class="it">is limited.</span></h2>
+        <p class="section-head sub" style="margin-top:24px;margin-bottom:32px">
+          We capture the transformative stories of every participant — the surgeons, the pilots, the parents, the survivors — to show what is possible when seven days, seven continents and a full marathon stand between you and the finish line.
+        </p>
+        <a href="#" class="btn-ghost">Watch all videos <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE / RUNBUK -->
+<section class="who">
+  <div class="wrap">
+    <div class="who-grid">
+      <div class="who-left reveal">
+        <div class="who-tag">Who We Are</div>
+        <img class="who-logo" src="https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/69088fd45e0abf89d08be2a4_RUNBUK%20black.png" alt="RunBuk" />
+      </div>
+      <div class="reveal reveal-d1">
+        <div class="who-tagline">
+          Discover new worlds <em style="color:var(--red);font-style:italic">within</em> &amp; beyond.
+        </div>
+        <p class="who-body">
+          The mission of RunBuk<sup class="tm">®</sup> is to help you explore the world through running. We design, build and operate world-class endurance events on every continent — from the ice fields of Antarctica to the Atacama Desert, from the North Pole to the Strait of Magellan.
+        </p>
+        <a href="#" class="who-cta">About RunBuk <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING EVENTS -->
+<section class="events">
+  <div class="wrap">
+    <div class="events-head reveal">
+      <div>
+        <span class="eyebrow">Events by RunBuk<sup class="tm">®</sup></span>
+        <h2 class="section-title" style="margin-top:14px">Upcoming <span class="it">races.</span></h2>
+      </div>
+      <div class="events-tag"><b>8 events</b> across 4 continents</div>
+    </div>
+  </div>
+  <div class="wrap" style="overflow:hidden">
+    <div class="events-scroll reveal">
+      <div class="ev-card">
+        <div class="ev-date">Jun 2026</div>
+        <div class="ev-name">Volcano Marathon<sup class="tm">®</sup></div>
+        <div class="ev-loc"><em>Easter Island</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-date">Jul 2026</div>
+        <div class="ev-name">North Pole Marathon<sup class="tm">®</sup> · Summer</div>
+        <div class="ev-loc"><em>Arctic Ocean</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-date">Nov 2026</div>
+        <div class="ev-name">Antarctic Ice Ultra™</div>
+        <div class="ev-loc"><em>Union Glacier</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-date">Dec 2026</div>
+        <div class="ev-name">Antarctic Ice Marathon<sup class="tm">®</sup></div>
+        <div class="ev-loc"><em>Union Glacier</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-date">Dec 2026</div>
+        <div class="ev-name">Strait of Magellan Marathon<sup class="tm">®</sup></div>
+        <div class="ev-loc"><em>Punta Arenas, Chile</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+      <div class="ev-card" style="border-color:var(--red)">
+        <div class="ev-date">Jan 2027</div>
+        <div class="ev-name">777™ World Marathon Challenge<sup class="tm">®</sup></div>
+        <div class="ev-loc"><em>Antarctica → Miami</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-date">Feb 2027</div>
+        <div class="ev-name">Aurora Marathon<sup class="tm">®</sup></div>
+        <div class="ev-loc"><em>Lapland, Finland</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-date">Apr 2027</div>
+        <div class="ev-name">North Pole Marathon<sup class="tm">®</sup> · Spring</div>
+        <div class="ev-loc"><em>Arctic Ocean</em></div>
+        <div class="ev-arrow">Details</div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="events-foot">All events <b>by RunBuk<sup class="tm">®</sup></b></div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip" id="register">
+  <div class="wrap">
+    <div class="cta-strip-inner">
+      <h3>Run the <span class="it">unrunnable.</span></h3>
+      <a href="#" class="btn-white">Register for 2027 <span class="arrow">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="row">
+          <img class="foot-logo" src="https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/695cd1618f3b03dfc0b80a67_WMC%20777%20white.png" alt="World Marathon Challenge" />
+          <div>
+            <strong>World Marathon Challenge<sup class="tm">®</sup></strong>
+            <div class="ml">Established 2015</div>
+          </div>
+        </div>
+        <div class="mission">
+          Discover new worlds within &amp; beyond. The original 7&nbsp;Marathons / 7&nbsp;Continents / 7&nbsp;Days<sup class="tm">®</sup>.
+        </div>
+        <div class="foot-runbuk">
+          <span class="lbl">A</span>
+          <img src="https://cdn.prod.website-files.com/63c0d071fb79e68290137d27/690449fb3cb2adf0d02c426f_0e911da9fa13a74090dc91e3d344b2f3_RUNBUK.png" alt="RunBuk" />
+          <span class="lbl">Event</span>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>WMC</h4>
+        <ul>
+          <li><a href="#">The Event</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Competitors</a></li>
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Official Gear</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Registration</a></li>
+          <li><a href="#">Pre-Registration</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Clubs</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>RunBuk Events</h4>
+        <ul>
+          <li><a href="#">North Pole Marathon<sup class="tm">®</sup></a></li>
+          <li><a href="#">Antarctic Ice Marathon<sup class="tm">®</sup></a></li>
+          <li><a href="#">Antarctic Ice Ultra™</a></li>
+          <li><a href="#">Volcano Marathon<sup class="tm">®</sup></a></li>
+          <li><a href="#">Aurora Marathon™</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <div class="socials" style="margin-top:0">
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">F</a>
+          <a href="#" aria-label="YouTube">Y</a>
+        </div>
+        <ul style="margin-top:24px">
+          <li><a href="mailto:info@runbuk.com">info@runbuk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 RunBuk Inc. All rights reserved.</span>
+      <span>World Marathon Challenge®, 7·7·7™ &amp; Intercontinental Marathon Club® are RunBuk trademarks.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    if(btn && menu){
+      btn.addEventListener('click', function(){
+        var open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.addEventListener('click', function(e){
+        if(e.target.tagName === 'A'){
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+        }
+      });
+    }
+    var els = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      },{rootMargin:'0px 0px -8% 0px',threshold:0.05});
+      els.forEach(function(el){ io.observe(el); });
+    } else {
+      els.forEach(function(el){ el.classList.add('in'); });
+    }
+  })();
+</script>
+
+</body>
+</html>
