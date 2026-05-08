@@ -145,7 +145,7 @@
     width:max(100vw,177.78vh);
     height:max(56.25vw,100vh);
     transform:translate(-50%,-50%);
-    border:0;pointer-events:none;
+    object-fit:cover;border:0;pointer-events:none;
     opacity:0;transition:opacity 1.6s ease;
   }
   .hero-video.ready{opacity:1}
@@ -724,16 +724,19 @@
 <!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg" aria-hidden="true">
-    <iframe
+    <video
       class="hero-video"
       id="heroVideo"
-      src="https://www.youtube-nocookie.com/embed/73rI_R5xwz0?autoplay=1&mute=1&loop=1&playlist=73rI_R5xwz0&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&enablejsapi=1"
-      allow="autoplay; encrypted-media; picture-in-picture; accelerometer; gyroscope"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-      title="Volcano Marathon"
+      src="vm-bg.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      disablepictureinpicture
+      disableremoteplayback
       tabindex="-1"
-      aria-hidden="true"></iframe>
+      aria-hidden="true"></video>
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="wrap hero-inner">
@@ -1162,14 +1165,23 @@
     var hero = document.getElementById('hero');
     if(hero){ requestAnimationFrame(function(){ hero.classList.add('in'); }); }
 
-    // Always reveal the bg video iframe — independent of YT IFrame API
+    // Reveal the bg video with a soft fade once it actually starts playing
     var heroVideo = document.getElementById('heroVideo');
     if(heroVideo){
-      var revealed = false;
-      var reveal = function(){ if(!revealed){ revealed = true; heroVideo.classList.add('ready'); } };
-      heroVideo.addEventListener('load', function(){ setTimeout(reveal, 800); });
-      // Guaranteed fade-in even if load doesn't fire
-      setTimeout(reveal, 2200);
+      var reveal = function(){ heroVideo.classList.add('ready'); };
+      heroVideo.addEventListener('playing', reveal, {once:true});
+      heroVideo.addEventListener('canplay', function(){ setTimeout(reveal, 200); }, {once:true});
+      // Hard fallback if events don't fire (some browsers stall preload)
+      setTimeout(reveal, 1800);
+      // Some Safari builds defer autoplay until user gesture is detected
+      var kick = function(){
+        var p = heroVideo.play();
+        if(p && p.catch) p.catch(function(){});
+      };
+      kick();
+      document.addEventListener('visibilitychange', function(){
+        if(!document.hidden && heroVideo.paused) kick();
+      });
     }
 
 
@@ -1187,42 +1199,6 @@
   })();
 </script>
 
-<!-- YouTube IFrame API — only used to mask the end-screen recommendations.
-     The video plays via &autoplay=1 in the URL regardless of whether the API loads. -->
-<script src="https://www.youtube.com/iframe_api" async></script>
-<script>
-  var heroPlayer;
-  function onYouTubeIframeAPIReady(){
-    if(typeof YT === 'undefined' || !YT.Player) return;
-    var iframe = document.getElementById('heroVideo');
-    if(!iframe) return;
-    try{
-      heroPlayer = new YT.Player('heroVideo', {
-        events:{
-          onStateChange: function(e){
-            if(e.data === YT.PlayerState.PLAYING){
-              try{
-                var dur = heroPlayer.getDuration();
-                if(dur && dur > 2){
-                  clearInterval(window.__heroLoopWatch);
-                  window.__heroLoopWatch = setInterval(function(){
-                    try{
-                      var t = heroPlayer.getCurrentTime();
-                      if(t >= dur - 0.8){ heroPlayer.seekTo(0, true); }
-                    }catch(_){}
-                  }, 250);
-                }
-              }catch(_){}
-            }
-            if(e.data === YT.PlayerState.ENDED){
-              try{ heroPlayer.seekTo(0, true); heroPlayer.playVideo(); }catch(_){}
-            }
-          }
-        }
-      });
-    }catch(_){}
-  }
-</script>
 
 </body>
 </html>
